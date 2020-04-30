@@ -1,11 +1,12 @@
 ---
 note:
     createdAt: 2020-04-30T12:59:54.155Z
-    modifiedAt: 2020-04-30T13:28:55.308Z
+    modifiedAt: 2020-04-30T13:42:29.773Z
     tags: [algorithm/crdt, crossnote]
     id: ""
 ---
 # Conclave
+<!-- @crossnote.comment "id":"c9cf43e9-7d3e-489e-9f0e-f870fa664c35" -->  
 [Source](https://conclave-team.github.io/conclave-site/#how-will-users-send-messages-directly-to-each-other "Permalink to Conclave")
 
 A private and secure real-time collaborative text editor
