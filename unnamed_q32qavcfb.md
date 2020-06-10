@@ -1,13 +1,16 @@
 ---
 note:
-    id: ""
-    tags: [小工具]
-    modifiedAt: 2020-05-22T14:10:39.213Z
     createdAt: 2020-05-22T14:10:37.568Z
+    modifiedAt: 2020-06-01T14:30:08.361Z
+    tags: [小工具]
+    id: ""
 ---
 # Tmux Cheat Sheet & Quick Reference
 
 [Source](https://tmuxcheatsheet.com/ "Permalink to Tmux Cheat Sheet & Quick Reference")
+![](https://i.loli.net/2020/06/01/9oDuXtIcNkVMvWJ.png)  
+
+
 
 ## Sessions
 
