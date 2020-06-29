@@ -1,10 +1,10 @@
 ---
 tags:
-    - crossnote/inspirations
-id: ""
+  - crossnote/inspirations
 created: 2020-06-14T11:54:42.559Z
 modified: 2020-06-14T11:54:56.003Z
 ---
+
 # 使用 TiddlyWiki 打造轻便个人 Wiki 知识库 - 钉子の次元
 
 [Source](http://blog.dimpurr.com/tiddly-wiki/ "Permalink to 使用 TiddlyWiki 打造轻便个人 Wiki 知识库 - 钉子の次元")
@@ -29,22 +29,22 @@ TiddlyWiki 效果预览
 
 ## TiddlyWiki 的特点
 
-* **程序和数据全部存储在一个单文件 html 中**
-  * 这让 TiddlyWiki 既可以在你的本机运行，类似一个在浏览器中运行的绿色版单文件应用程序；又可以上传到服务器上，和网络上的所有人分享
-  * 同时部署极其简单，只需要一个能存放 html 的服务器，上传上去就可以使用，根本不需要 PHP、 Node.js、Python 或者其他什么语言环境，也没有任何配置步骤
-  * 你可以随时再把服务器上的 TiddlyWiki 保存进本地或者 U 盘，以便带进任何没有网络的环境查阅
-* **作为 Wiki 系统，有 Tag 标签和条目关联等必须的基本功能，和强大的编辑器**
-  * 你能用 Tag 快速整理条目
-  * 你能用 `[[条目名]]` 这样的语法快速链接到其他条目
-  * 你能用条目名作为 Tag 其他条目，达到设置子条目的效果
-  * 你甚至可以用 `<<list-links "[tag[ACM]sort[title]]-[tag[OJ 草稿和题解]]">>` 这样的过滤器生成一个包含特定 Tag ，但是删除掉另一个特定 Tag 的条目列表！
-  * TiddlyWiki 使用一种类似 Markdown 但是稍有差异的语法，不过很快可以习惯并且非常好用
-* **方便的插件和主题系统**
-  * 可以通过插件支持代码高亮、 LaTex 数学公式、标准 Markdown 语法、文章嵌入 TODO 列表、条目加密锁定 ……
-  * 可以安装 Material Design 风格、博客风格的样式主题 ……
-* **外观和操作设计别致，使用体验好**
-  * TiddlyWiki 是一个典型的单页面 Web 应用，所以打开的时候全部内容都已经载入和缓存在了浏览器中，换而言之你不需要刷新页面，操作和访问体验非常快速和流畅
-  * TiddlyWiki 在右侧是搜索和多种方式的条目索引，而左边是可以卡片式展开多个和关闭的条目，还可以为特定的条目顺序和组合生成静态链接，浏览和使用十分方便
+- **程序和数据全部存储在一个单文件 html 中**
+  - 这让 TiddlyWiki 既可以在你的本机运行，类似一个在浏览器中运行的绿色版单文件应用程序；又可以上传到服务器上，和网络上的所有人分享
+  - 同时部署极其简单，只需要一个能存放 html 的服务器，上传上去就可以使用，根本不需要 PHP、 Node.js、Python 或者其他什么语言环境，也没有任何配置步骤
+  - 你可以随时再把服务器上的 TiddlyWiki 保存进本地或者 U 盘，以便带进任何没有网络的环境查阅
+- **作为 Wiki 系统，有 Tag 标签和条目关联等必须的基本功能，和强大的编辑器**
+  - 你能用 Tag 快速整理条目
+  - 你能用 `[[条目名]]` 这样的语法快速链接到其他条目
+  - 你能用条目名作为 Tag 其他条目，达到设置子条目的效果
+  - 你甚至可以用 `<<list-links "[tag[ACM]sort[title]]-[tag[OJ 草稿和题解]]">>` 这样的过滤器生成一个包含特定 Tag ，但是删除掉另一个特定 Tag 的条目列表！
+  - TiddlyWiki 使用一种类似 Markdown 但是稍有差异的语法，不过很快可以习惯并且非常好用
+- **方便的插件和主题系统**
+  - 可以通过插件支持代码高亮、 LaTex 数学公式、标准 Markdown 语法、文章嵌入 TODO 列表、条目加密锁定 ……
+  - 可以安装 Material Design 风格、博客风格的样式主题 ……
+- **外观和操作设计别致，使用体验好**
+  - TiddlyWiki 是一个典型的单页面 Web 应用，所以打开的时候全部内容都已经载入和缓存在了浏览器中，换而言之你不需要刷新页面，操作和访问体验非常快速和流畅
+  - TiddlyWiki 在右侧是搜索和多种方式的条目索引，而左边是可以卡片式展开多个和关闭的条目，还可以为特定的条目顺序和组合生成静态链接，浏览和使用十分方便
 
 ## 如何开始
 
@@ -68,10 +68,10 @@ PHP 保存非常容易配置。官方的教程在这里：[http://tiddlywiki.com
 2. 找到里面 `_th\lib\store.php` 这个文件，解压并编辑里面的 `$USERS = array( 'UserName1'=>'Password1', etc)` 为你想要的用户名和密码
 3. 上传 store.php 到你的服务器，去 TiddlyWiki \> 保存 \> TiddlySpot 保存模块 ，设置 高级设置 \> 服务器网址 为这个 store.php 文件的完整地址，然后在上面填写用户名和密码
 4. 现在，点击保存时，已经会直接保存在服务器上了
-5. 注意： 
-  1. 你可能需要把备份文件名设置成 index.html
-  2. 每次保存都会自动创建一份备份，你可以定期手动清理
-  3. 建议修改备份文件夹为 backup ，这样会把备份保存在 backup/ 子目录而非 . 根目录下
+5. 注意：
+6. 你可能需要把备份文件名设置成 index.html
+7. 每次保存都会自动创建一份备份，你可以定期手动清理
+8. 建议修改备份文件夹为 backup ，这样会把备份保存在 backup/ 子目录而非 . 根目录下
 
 因为 TiddlyWiki 并没有用户登陆界面，这个设置页面就相当于登陆页面。密码是按浏览器保存的，所以如果你想在当前浏览器退出登录，到设置页面清除密码设置就好。如果你换了一个浏览器打开 Wiki ，你将需要进入设置重新填写一次密码(相当于登陆)，才能使用在线保存。
 
@@ -91,19 +91,19 @@ PHP 保存非常容易配置。官方的教程在这里：[http://tiddlywiki.com
 
 TiddlyWiki store.php split() error
 
-那么可能是你运行的 php 版本已经废弃这个函数，编辑 `store.php` 文件并查找替换所有的 `split `为 `explode` 即可。
+那么可能是你运行的 php 版本已经废弃这个函数，编辑 `store.php` 文件并查找替换所有的 `split`为 `explode` 即可。
 
 ## 可能用到的资源
 
-我收集的 TiddlyWiki 相关资源，都会第一时间整理到我的知识库： [http://note.dimpurr.com/\#TiddlyWiki%20使用](http://note.dimpurr.com/#TiddlyWiki%20%E4%BD%BF%E7%94%A8)
+我收集的 TiddlyWiki 相关资源，都会第一时间整理到我的知识库： [http://note.dimpurr.com/\#TiddlyWiki%20 使用](http://note.dimpurr.com/#TiddlyWiki%20%E4%BD%BF%E7%94%A8)
 
 比较重要的包括：
 
-* 第三方官网繁体中文翻译 [http://tw5-zh.tiddlyspot.com](http://tw5-zh.tiddlyspot.com/) (感谢 Bennyli 提醒)
-* 编辑器标记语法参考 [http://tiddlywiki.com/\#WikiText](http://tiddlywiki.com/#WikiText)
-* TiddlyWiki Community (官方整理的社区资源列表) [http://tiddlywiki.com/\#Community:Community%20Plugins](http://tiddlywiki.com/#Community:Community%20Plugins)
-* tid.li Plugins (一个个人第三方插件源) <http://tid.li/tw5/plugins.html>
-* CommunityPlugins (更大的一个第三方插件索引) [http://erwanm.github.io/tw-community-search/\#CommunityPlugins](http://erwanm.github.io/tw-community-search/#CommunityPlugins)
+- 第三方官网繁体中文翻译 [http://tw5-zh.tiddlyspot.com](http://tw5-zh.tiddlyspot.com/) (感谢 Bennyli 提醒)
+- 编辑器标记语法参考 [http://tiddlywiki.com/\#WikiText](http://tiddlywiki.com/#WikiText)
+- TiddlyWiki Community (官方整理的社区资源列表) [http://tiddlywiki.com/\#Community:Community%20Plugins](http://tiddlywiki.com/#Community:Community%20Plugins)
+- tid.li Plugins (一个个人第三方插件源) <http://tid.li/tw5/plugins.html>
+- CommunityPlugins (更大的一个第三方插件索引) [http://erwanm.github.io/tw-community-search/\#CommunityPlugins](http://erwanm.github.io/tw-community-search/#CommunityPlugins)
 
 ## 关于插件
 
@@ -113,19 +113,19 @@ TiddlyWiki store.php split() error
 
 我这里安利下我用到的插件，更多的可以在官方插件、主题市场和上面的插件源里自己发掘。
 
-* TiddlyWiki 官方插件程式库 
-  * **Highlight.js: syntax highlighting** 代码高亮，程序员必备
-  * **Markdown parser** 添加标准 Markdown 支持，如果你希望和 md 格式的平台互相导入和导出的话；大部分情况下，如果可以我建议使用原生 TiddlyWiki 语法，因为功能更加强大和对插件支持更好
-  * **KaTeX: mathematical typography** 数学公式输入和排版
-* **[MathJax](http://mathjax-tw5.kantorsite.net/)** 相比 KaTeX 更强大的 TeX 解析器 
-  * 为了兼容新版主题，你可能需要 [做点微小的工作](https://gist.github.com/kpe/cc0547b318e6f8d4ddaa#gistcomment-1885438) 修改一行插件代码
-* [TiddlyWiki Community Search](http://erwanm.github.io/tw-community-search/#)
-  * **[tw5-checklist](http://grosinger.net/tw5-checklist/)** 我经常使用的，一个轻量级在文章中嵌入 checklist 的插件，适合做些学习计划等
-  * **Encrypt-Tiddler** 对单个条目启用输入密码查看
-* [tid.li Plugins](http://tid.li/tw5/plugins.html)
-  * **ToDoNow** 一个强大的简直有点过头的嵌入 Todolist 插件
-  * **EditorCounter & Autosaver **为编辑器添加字数统计和一定字数更改后自动保存 (原生自带了条目修改确认和删除操作时自动保存功能，去设置里开启即可)
-* **[TiddlyMap](http://tiddlymap.org/)** 一个强大的令人发指的流程图、思维导图等绘制插件
+- TiddlyWiki 官方插件程式库
+  - **Highlight.js: syntax highlighting** 代码高亮，程序员必备
+  - **Markdown parser** 添加标准 Markdown 支持，如果你希望和 md 格式的平台互相导入和导出的话；大部分情况下，如果可以我建议使用原生 TiddlyWiki 语法，因为功能更加强大和对插件支持更好
+  - **KaTeX: mathematical typography** 数学公式输入和排版
+- **[MathJax](http://mathjax-tw5.kantorsite.net/)** 相比 KaTeX 更强大的 TeX 解析器
+  - 为了兼容新版主题，你可能需要 [做点微小的工作](https://gist.github.com/kpe/cc0547b318e6f8d4ddaa#gistcomment-1885438) 修改一行插件代码
+- [TiddlyWiki Community Search](http://erwanm.github.io/tw-community-search/#)
+  - **[tw5-checklist](http://grosinger.net/tw5-checklist/)** 我经常使用的，一个轻量级在文章中嵌入 checklist 的插件，适合做些学习计划等
+  - **Encrypt-Tiddler** 对单个条目启用输入密码查看
+- [tid.li Plugins](http://tid.li/tw5/plugins.html)
+  - **ToDoNow** 一个强大的简直有点过头的嵌入 Todolist 插件
+  - **EditorCounter & Autosaver **为编辑器添加字数统计和一定字数更改后自动保存 (原生自带了条目修改确认和删除操作时自动保存功能，去设置里开启即可)
+- **[TiddlyMap](http://tiddlymap.org/)** 一个强大的令人发指的流程图、思维导图等绘制插件
 
 至于主题也有不少，不过我对默认的主题很满意 (你可能会发现 TiddlyWiki 的默认样式巧合的和我的 [Clearision](http://blog.dimpurr.com/clearision/) 博客主题灰色风格的设计十分相似) ，外加懒得折腾，所以就没有更换。
 
@@ -170,8 +170,8 @@ TiddlyWiki 有时会把符合 PascalCase / UpperCamelCase 的词自动识别为�
 
 TiddlyWiki 默认的搜索框存在字符数限制，要求搜索关键词大于三个字符。对于英语环境来说这很合理，但是对于中文来说，二字词的搜索是很常见的，因此很不方便。修改这个设置只需要：
 
-* 添加一个标题为 `$:/config/Search/MinLength` 的新条目
-* 内容为 `1`
+- 添加一个标题为 `$:/config/Search/MinLength` 的新条目
+- 内容为 `1`
 
 ### 禁用自动 WikiLink
 

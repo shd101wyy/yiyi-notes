@@ -1,13 +1,14 @@
 ---
 tags:
-    - crossnote/android/twa
-    - mobile/android/twa
-id: ""
+  - crossnote/android/twa
+  - mobile/android/twa
 created: 2020-05-01T08:07:19.503Z
 modified: 2020-05-01T08:07:41.963Z
 ---
+
 # @bubblewrap/cli
-#crossnote/android/twa #mobile/android/twa 
+
+#crossnote/android/twa #mobile/android/twa
 
 [Source](https://www.npmjs.com/package/@bubblewrap/cli "Permalink to @bubblewrap/cli")
 
@@ -17,7 +18,7 @@ Bubblewrap is a Command Line Interface (CLI) that helps developers to create a P
 
 ## Requirements
 
-* [Node.js](https://nodejs.org/en/) 10.0 or above
+- [Node.js](https://nodejs.org/en/) 10.0 or above
 
 ## Setting up the Environment
 
@@ -77,7 +78,7 @@ Initializes an Android project for Trusted Web Activity from a Web Manifest. The
 
 Options:
 
-* `--directory`: path where to generate the project. Defaults to the current directory.
+- `--directory`: path where to generate the project. Defaults to the current directory.
 
 ## `build`
 
@@ -89,7 +90,7 @@ Usage:
 
 Options:
 
-* `--skipPwaValidation`: skips validating the wrapped PWA against the Quality Criteria.
+- `--skipPwaValidation`: skips validating the wrapped PWA against the Quality Criteria.
 
 ## `update`
 
@@ -101,9 +102,9 @@ Usage:
 
 Options:
 
-* `--appVersionName`: version name to be used on on the upgrade. Ignored if `--skipVersionUpgrade` is used.
-* `--skipVersionUpgrade`: skips upgrading `appVersion` and `appVersionCode`.
-* `--manifest`: directory where the client should look for `twa-manifest.json`.
+- `--appVersionName`: version name to be used on on the upgrade. Ignored if `--skipVersionUpgrade` is used.
+- `--skipVersionUpgrade`: skips upgrading `appVersion` and `appVersionCode`.
+- `--manifest`: directory where the client should look for `twa-manifest.json`.
 
 ## `validate`
 

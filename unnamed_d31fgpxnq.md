@@ -1,11 +1,11 @@
 ---
 tags:
-    - backend
-    - backend/maven
-id: ""
+  - backend
+  - backend/maven
 created: 2020-06-02T08:05:32.127Z
 modified: 2020-06-02T09:54:56.317Z
 ---
+
 # Maven proxy
 
 Create `settings.xml` in `~/.m2`
@@ -31,7 +31,6 @@ Create `settings.xml` in `~/.m2`
         </proxy>
     </proxies>
     <profiles />
-    <activeProfiles /> 
+    <activeProfiles />
 </settings>
 ```
-

@@ -1,10 +1,10 @@
 ---
 tags:
-    - 'algorithm/machine learning'
-id: ""
+  - "algorithm/machine learning"
 created: 2020-05-20T13:54:13.466Z
 modified: 2020-05-20T14:00:07.623Z
 ---
+
 # scikit-learn: machine learning in Python — scikit-learn 0.23.1 documentation
 
 [Source](https://scikit-learn.org/stable/index.html "Permalink to scikit-learn: machine learning in Python — scikit-learn 0.23.1 documentation")
@@ -13,10 +13,10 @@ modified: 2020-05-20T14:00:07.623Z
 
 [Getting Started](https://scikit-learn.org/stable/getting_started.html)[Release Highlights for 0.23](https://scikit-learn.org/stable/auto_examples/release_highlights/plot_release_highlights_0_23_0.html)[GitHub](https://github.com/scikit-learn/scikit-learn)
 
-* Simple and efficient tools for predictive data analysis
-* Accessible to everybody, and reusable in various contexts
-* Built on NumPy, SciPy, and matplotlib
-* Open source, commercially usable - BSD license
+- Simple and efficient tools for predictive data analysis
+- Accessible to everybody, and reusable in various contexts
+- Built on NumPy, SciPy, and matplotlib
+- Open source, commercially usable - BSD license
 
 #### [Classification](https://scikit-learn.org/stable/supervised_learning.html#supervised-learning)
 
@@ -69,7 +69,7 @@ Comparing, validating and choosing parameters and models.
 **Applications:** Improved accuracy via parameter tuning
 **Algorithms:**[grid search](https://scikit-learn.org/stable/modules/grid_search.html#grid-search), [cross validation](https://scikit-learn.org/stable/modules/cross_validation.html#cross-validation), [metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#model-evaluation), and [more...](https://scikit-learn.org/stable/model_selection.html)
 
-[![Demonstration of multi-metric evaluation on cross\_val\_score and GridSearchCV](https://scikit-learn.org/stable/_images/sphx_glr_plot_multi_metric_evaluation_thumb.png)](https://scikit-learn.org/stable/auto_examples/model_selection/plot_multi_metric_evaluation.html)
+[![Demonstration of multi-metric evaluation on cross_val_score and GridSearchCV](https://scikit-learn.org/stable/_images/sphx_glr_plot_multi_metric_evaluation_thumb.png)](https://scikit-learn.org/stable/auto_examples/model_selection/plot_multi_metric_evaluation.html)
 
 [Examples](https://scikit-learn.org/stable/auto_examples/index.html#model-selection)
 

@@ -1,10 +1,10 @@
 ---
 tags:
-    - frontend
-id: ""
+  - frontend
 created: 2020-03-21T12:20:36.320Z
 modified: 2020-04-30T14:48:24.615Z
 ---
+
 # What is AMD, CommonJS, and UMD?
 
 [Source](https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/ "Permalink to What is AMD, CommonJS, and UMD?")

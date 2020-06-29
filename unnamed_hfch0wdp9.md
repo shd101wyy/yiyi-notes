@@ -1,13 +1,14 @@
 ---
 tags:
-    - crossnote/android/twa
-    - mobile/android/twa
-id: ""
+  - crossnote/android/twa
+  - mobile/android/twa
 created: 2020-05-01T08:05:27.492Z
 modified: 2020-05-01T08:06:38.997Z
 ---
-# Trusted Web Activities Quick Start Guide  |  Web On Android
-#crossnote/android/twa  #mobile/android/twa 
+
+# Trusted Web Activities Quick Start Guide | Web On Android
+
+#crossnote/android/twa #mobile/android/twa
 
 [Source](https://developers.google.com/web/android/trusted-web-activity/quick-start#creating-your-asset-link-file "Permalink to Trusted Web Activities Quick Start Guide  |  Web On Android")
 
@@ -17,17 +18,17 @@ Trusted Web Activities can be a bit tricky to set up, especially if all you want
 
 By the end of this guide, you will:
 
-* Have built an application that uses Trusted Web Activity and passes verification.
-* Understand when your debug keys and your release keys are used.
-* Be able to determine the signature your Android Application is being built with.
-* Know how to create a basic [Digital Asset Links](https://developers.google.com/digital-asset-links/v1/getting-started) file.
+- Have built an application that uses Trusted Web Activity and passes verification.
+- Understand when your debug keys and your release keys are used.
+- Be able to determine the signature your Android Application is being built with.
+- Know how to create a basic [Digital Asset Links](https://developers.google.com/digital-asset-links/v1/getting-started) file.
 
 To follow this guide you'll need:
 
-* [Android Studio Installed](https://developer.android.com/studio/install)
-* An Android phone or emulator connected and set up for development ([Enable USB debugging](https://developer.android.com/studio/debug/dev-options.html#enable) if you’re using a physical phone).
-* A browser that supports Trusted Web Activity on your development phone. Chrome 72 or later will work. Support in other browsers is on its way.
-* A website you'd like to view in the Trusted Web Activity.
+- [Android Studio Installed](https://developer.android.com/studio/install)
+- An Android phone or emulator connected and set up for development ([Enable USB debugging](https://developer.android.com/studio/debug/dev-options.html#enable) if you’re using a physical phone).
+- A browser that supports Trusted Web Activity on your development phone. Chrome 72 or later will work. Support in other browsers is on its way.
+- A website you'd like to view in the Trusted Web Activity.
 
 A Trusted Web Activity lets your Android App launch a full screen Browser Tab without any browser UI. This capability is restricted to websites that you own, and you prove this by setting up Digital Asset Links. Digital Asset Links consist essentially of a file on your website that points to your app and some metadata in your app that points to your website. We'll talk [more about them later](https://developers.google.com/web/android/trusted-web-activity/quick-start#a-note-on-signing-keys).
 
@@ -41,9 +42,9 @@ The [svgomg-twa](https://github.com/GoogleChromeLabs/svgomg-twa) repo contains a
 2. Import the Project into Android Studio, using **File** \> **New** \> **Import Project**, and select the folder to which the project was cloned.
 3. Open the app's `build.gradle` and modify the values in `twaManifest`. There are two `build.gradle` files. You want the module one at `app/build.gradle`.
 
-  * Change `hostName` to point to your website. Your website must be available on HTTPS, though you omit that from the `hostName` field.
-  * Change `name` to whatever you want.
-  * Change `applicationId` to something specific to your project. This translates into the app’s package name and is [how the app is identified](https://developer.android.com/studio/build/application-id) on the Play Store - no two apps can share the `applicationId` and if you change it you’ll need to create a new Play Store listing.
+- Change `hostName` to point to your website. Your website must be available on HTTPS, though you omit that from the `hostName` field.
+- Change `name` to whatever you want.
+- Change `applicationId` to something specific to your project. This translates into the app’s package name and is [how the app is identified](https://developer.android.com/studio/build/application-id) on the Play Store - no two apps can share the `applicationId` and if you change it you’ll need to create a new Play Store listing.
 
 ## Build and run
 
@@ -51,36 +52,36 @@ In Android Studio hit **Run**, **Run ‘app’** (where ‘app’ is your module
 
 ### A note on signing keys
 
-Digital Asset Links take into account the key that an APK has been signed with and a common cause for verification failing is to use the wrong signature. (Remember, failing verification means you'll launch your website as a Custom Tab with browser UI at the top of the page.) When you hit **Run** or **Build APK** in Android Studio, the APK will be created with your developer *debug key*, which Android Studio automatically generated for you.
+Digital Asset Links take into account the key that an APK has been signed with and a common cause for verification failing is to use the wrong signature. (Remember, failing verification means you'll launch your website as a Custom Tab with browser UI at the top of the page.) When you hit **Run** or **Build APK** in Android Studio, the APK will be created with your developer _debug key_, which Android Studio automatically generated for you.
 
-If you deploy your app to the Play Store, you’ll hit **Build** \> **Generate Signed APK**, which will use a different signature, one that you’ll have created yourself (and protected with a password). That means that if your Digital Asset Links file specifies your *production key*, verification will fail when you build with your *debug key*. This also can happen the other way around - if the Digital Asset Links file has your *debug key*, your Trusted Web Activity will work fine locally, but then when you download the signed version from the Play Store, verification will fail.
+If you deploy your app to the Play Store, you’ll hit **Build** \> **Generate Signed APK**, which will use a different signature, one that you’ll have created yourself (and protected with a password). That means that if your Digital Asset Links file specifies your _production key_, verification will fail when you build with your _debug key_. This also can happen the other way around - if the Digital Asset Links file has your _debug key_, your Trusted Web Activity will work fine locally, but then when you download the signed version from the Play Store, verification will fail.
 
-You can put both your *debug key* and *production key* in your asset link file (see [Adding More Keys](https://developers.google.com/web/android/trusted-web-activity/quick-start#adding-more-keys) below), but your debug key is less secure. Anyone who gets a copy of the file can use it. Finally, if you have your app installed on your device with one key, you can’t install the version with the other key. You must uninstall the previous version first.
+You can put both your _debug key_ and _production key_ in your asset link file (see [Adding More Keys](https://developers.google.com/web/android/trusted-web-activity/quick-start#adding-more-keys) below), but your debug key is less secure. Anyone who gets a copy of the file can use it. Finally, if you have your app installed on your device with one key, you can’t install the version with the other key. You must uninstall the previous version first.
 
 ### Building your app
 
-* To build with debug keys: 
+- To build with debug keys:
   1. Click **Run 'app'** where 'app' is the name of your module if you changed it.
-* To build with release keys: 
+- To build with release keys:
   1. Click **Build**, then **Generate Signed APK**.
   2. Choose **APK**.
   3. If you're doing this for the first time, on the next page press **Create New** to create a new key and follow the [Android documentation](https://developer.android.com/studio/publish/app-signing#generate-key). Otherwise, select your previously created key.
-  4. Press **Next** and pick the *release* build variant.
+  4. Press **Next** and pick the _release_ build variant.
   5. Make sure you check both the V1 and the V2 signatures (the Play Store won’t let you upload the APK otherwise).
   6. Click **Finish**.
 
-If you built with debug keys, your app will be automatically deployed to your device. On the other hand if you built with release keys, after a few seconds a pop up will appear in the bottom right corner giving you the option to locate or analyze the APK. (If you miss it, you can press on the *Event Log* in the bottom right.) You’ll need to use [adb](https://developer.android.com/studio/command-line/adb#move) manually to install the signed APK with `adb install app-release.apk`.
+If you built with debug keys, your app will be automatically deployed to your device. On the other hand if you built with release keys, after a few seconds a pop up will appear in the bottom right corner giving you the option to locate or analyze the APK. (If you miss it, you can press on the _Event Log_ in the bottom right.) You’ll need to use [adb](https://developer.android.com/studio/command-line/adb#move) manually to install the signed APK with `adb install app-release.apk`.
 
 This table shows which key is used based on how you create your APK.
 
 KeyDebugReleaseWhen is it created?Automatically by Android Studio.Manually by you.When is it used?
 
-* **Run 'app'**.
-* **Debug 'app'**.
-* **Build APK**.
+- **Run 'app'**.
+- **Debug 'app'**.
+- **Build APK**.
 
-* **Generate Signed APK**.
-* When the app is downloaded from the Play Store.
+- **Generate Signed APK**.
+- When the app is downloaded from the Play Store.
 
 ## Creating your asset link file
 
@@ -96,10 +97,10 @@ Put the Digital Asset Link in a file called `assetlinks.json` and upload it to y
 
 If you opt in to [App signing by Google Play](https://developer.android.com/studio/publish/app-signing#app-signing-google-play), Google manages your app's signing key. There are two ways you can get the correct Digital Asset Link file for a Google managed app signing key:
 
-* With the [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool): 
+- With the [Asset Link Tool](https://play.google.com/store/apps/details?id=dev.conn.assetlinkstool):
   1. Download your app from the Google Play Store.
   2. Repeat [Creating your asset link file](https://developers.google.com/web/android/trusted-web-activity/quick-start#creating-your-asset-link-file).
-* Manually: 
+- Manually:
   1. Open the [Google Play Console](https://play.google.com/apps/publish/).
   2. Select your app.
   3. Choose **Release management** and then **App signing** from the panel on the left.
@@ -165,4 +166,4 @@ Yes
 
 No
 
-rss\_feed Subscribe to our [RSS](https://goo.gl/siLiwf) or [Atom](https://goo.gl/oc2PGP) feed and get the latest **updates** in your favorite feed reader!
+rss_feed Subscribe to our [RSS](https://goo.gl/siLiwf) or [Atom](https://goo.gl/oc2PGP) feed and get the latest **updates** in your favorite feed reader!

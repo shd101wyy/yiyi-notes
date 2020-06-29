@@ -1,12 +1,12 @@
 ---
 tags:
-    - crossnote/inspirations
-    - 摘录
-id: ""
+  - crossnote/inspirations
+  - 摘录
 created: 2020-05-20T14:40:49.656Z
 modified: 2020-05-20T14:41:17.257Z
 ---
-# 用TiddlyWiki替代Notion和EverNote作为个人知识管理系统
+
+# 用 TiddlyWiki 替代 Notion 和 EverNote 作为个人知识管理系统
 
 [Source](https://onetwo.ren/%E7%94%A8tiddlywiki%E6%9B%BF%E4%BB%A3notion%E5%92%8Cevernote%E7%AE%A1%E7%90%86%E7%9F%A5%E8%AF%86/ "Permalink to 用TiddlyWiki替代Notion和EverNote作为个人知识管理系统")
 

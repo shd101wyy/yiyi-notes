@@ -1,19 +1,19 @@
 ---
 tags:
-    - backend/docker
-id: ""
+  - backend/docker
 created: 2020-03-21T11:18:47.975Z
 modified: 2020-03-21T11:39:08.212Z
 ---
+
 # 国内 docker 镜像加速
 
-> https://docker_practice.gitee.io/install/mirror.html 
- 
+> https://docker_practice.gitee.io/install/mirror.html
+
 国内从 Docker Hub 拉取镜像有时会遇到困难，此时可以配置镜像加速器。国内很多云服务商都提供了国内加速器服务，例如：
 
-* [Azure 中国镜像 https://dockerhub.azk8s.cn](https://github.com/Azure/container-service-for-azure-china/blob/master/aks/README.md#22-container-registry-proxy)
-* [阿里云加速器(需登录账号获取)](https://cr.console.aliyun.com/cn-hangzhou/mirrors)
-* [网易云加速器 https://hub-mirror.c.163.com](https://www.163yun.com/help/documents/56918246390157312)
+- [Azure 中国镜像 https://dockerhub.azk8s.cn](https://github.com/Azure/container-service-for-azure-china/blob/master/aks/README.md#22-container-registry-proxy)
+- [阿里云加速器(需登录账号获取)](https://cr.console.aliyun.com/cn-hangzhou/mirrors)
+- [网易云加速器 https://hub-mirror.c.163.com](https://www.163yun.com/help/documents/56918246390157312)
 
 > 由于镜像服务可能出现宕机，建议同时配置多个镜像。各个镜像站测试结果请到 [docker-practice/docker-registry-cn-mirror-test](https://github.com/docker-practice/docker-registry-cn-mirror-test/actions) 查看。
 
@@ -44,6 +44,7 @@ $ sudo systemctl restart docker
 ```
 
 ## Windows 10
+
 对于使用 Windows 10 的用户，在任务栏托盘 Docker 图标内右键菜单选择 Settings，打开配置窗口后在左侧导航菜单选择 Docker Engine，在右侧像下边一样编辑 json 文件，之后点击 Apply & Restart 保存后 Docker 就会重启并应用配置的镜像地址了。
 
 ```json
@@ -69,6 +70,7 @@ $ sudo systemctl restart docker
 ```
 
 ## 检查加速器是否生效
+
 执行 `$ docker info`，如果从结果中看到了如下内容，说明配置成功。
 
 ```
@@ -79,9 +81,9 @@ Registry Mirrors:
 ## gcr.io 镜像
 
 国内无法直接获取 `gcr.io/*` 镜像，我们可以将 `gcr.io/<repo-name>/<image-name>:<version>` 替换为 `gcr.azk8s.cn/<repo-name>/<image-name>:<version>` ,例如
-  
+
 ```
 $ docker pull gcr.io/google_containers/hyperkube-amd64:v1.9.2
 
 $ docker pull gcr.azk8s.cn/google_containers/hyperkube-amd64:v1.9.2
-```  
+```

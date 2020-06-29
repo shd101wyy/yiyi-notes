@@ -1,16 +1,15 @@
 ---
 tags:
-    - interview/frontend/basics
-id: ""
+  - interview/frontend/basics
 created: 2020-05-24T14:36:11.216Z
 modified: 2020-05-24T14:56:00.415Z
 ---
+
 # 前端面试基础
 
 > https://github.com/qiu-deqing/FE-interview
 
-
-## $HTML， HTTP，web 综合问题
+## \$HTML， HTTP，web 综合问题
 
 ### 常见排序算法的时间复杂度,空间复杂度
 
@@ -61,31 +60,31 @@ modified: 2020-05-24T14:56:00.415Z
 
 参考资料：[MDN: html global attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)或者[W3C HTML global-attributes](http://www.w3.org/TR/html-markup/global-attributes.html#common.attrs.core)
 
-* `accesskey`:设置快捷键，提供快速访问元素如[aaa](https://github.com/qiu-deqing/FE-interview#)在 windows 下的 firefox 中按`alt + shift + a`可激活元素
-* `class`:为元素设置类标识，多个类名用空格分开，CSS 和 javascript 可通过 class 属性获取元素
-* `contenteditable`: 指定元素内容是否可编辑
-* `contextmenu`: 自定义鼠标右键弹出菜单内容
-* `data-*`: 为元素增加自定义属性
-* `dir`: 设置元素文本方向
-* `draggable`: 设置元素是否可拖拽
-* `dropzone`: 设置元素拖放类型： copy, move, link
-* `hidden`: 表示一个元素是否与文档。样式上会导致元素不显示，但是不能用这个属性实现样式效果
-* `id`: 元素 id，文档内唯一
-* `lang`: 元素内容的的语言
-* `spellcheck`: 是否启动拼写和语法检查
-* `style`: 行内 css 样式
-* `tabindex`: 设置元素可以获得焦点，通过 tab 可以导航
-* `title`: 元素相关的建议信息
-* `translate`: 元素和子孙节点内容是否需要本地化
+- `accesskey`:设置快捷键，提供快速访问元素如[aaa](https://github.com/qiu-deqing/FE-interview#)在 windows 下的 firefox 中按`alt + shift + a`可激活元素
+- `class`:为元素设置类标识，多个类名用空格分开，CSS 和 javascript 可通过 class 属性获取元素
+- `contenteditable`: 指定元素内容是否可编辑
+- `contextmenu`: 自定义鼠标右键弹出菜单内容
+- `data-*`: 为元素增加自定义属性
+- `dir`: 设置元素文本方向
+- `draggable`: 设置元素是否可拖拽
+- `dropzone`: 设置元素拖放类型： copy, move, link
+- `hidden`: 表示一个元素是否与文档。样式上会导致元素不显示，但是不能用这个属性实现样式效果
+- `id`: 元素 id，文档内唯一
+- `lang`: 元素内容的的语言
+- `spellcheck`: 是否启动拼写和语法检查
+- `style`: 行内 css 样式
+- `tabindex`: 设置元素可以获得焦点，通过 tab 可以导航
+- `title`: 元素相关的建议信息
+- `translate`: 元素和子孙节点内容是否需要本地化
 
 ### 什么是 web 语义化,有什么好处
 
 web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTML 标签的语义化和 css 命名的语义化。 HTML 标签的语义化是指：通过使用包含语义的标签（如 h1-h6）恰当地表示文档结构 css 命名的语义化是指：为 html 标签添加有意义的 class，id 补充未表达的语义，如[Microformat](http://en.wikipedia.org/wiki/Microformats)通过添加符合规则的 class 描述信息 为什么需要语义化：
 
-* 去掉样式后页面呈现清晰的结构
-* 盲人使用读屏器更好地阅读
-* 搜索引擎更好地理解页面，有利于收录
-* 便团队项目的可持续运作及维护
+- 去掉样式后页面呈现清晰的结构
+- 盲人使用读屏器更好地阅读
+- 搜索引擎更好地理解页面，有利于收录
+- 便团队项目的可持续运作及维护
 
 ### HTTP method
 
@@ -101,22 +100,22 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
 ### 从浏览器地址栏输入 url 到显示页面的步骤(以 HTTP 为例)
 
 1. 在浏览器地址栏输入 URL
-2. 浏览器查看**缓存**，如果请求资源在缓存中并且新鲜，跳转到转码步骤 
+2. 浏览器查看**缓存**，如果请求资源在缓存中并且新鲜，跳转到转码步骤
    1. 如果资源未缓存，发起新请求
    2. 如果已缓存，检验是否足够新鲜，足够新鲜直接提供给客户端，否则与服务器进行验证。
-   3. 检验新鲜通常有两个 HTTP 头进行控制`Expires`和`Cache-Control`： 
-      * HTTP1.0 提供 Expires，值为一个绝对时间表示缓存新鲜日期
-      * HTTP1.1 增加了 Cache-Control: max-age=,值为以秒为单位的最大新鲜时间
+   3. 检验新鲜通常有两个 HTTP 头进行控制`Expires`和`Cache-Control`：
+      - HTTP1.0 提供 Expires，值为一个绝对时间表示缓存新鲜日期
+      - HTTP1.1 增加了 Cache-Control: max-age=,值为以秒为单位的最大新鲜时间
 3. 浏览器**解析 URL**获取协议，主机，端口，path
 4. 浏览器**组装一个 HTTP（GET）请求报文**
-5. 浏览器**获取主机 ip 地址**，过程如下： 
+5. 浏览器**获取主机 ip 地址**，过程如下：
    1. 浏览器缓存
    2. 本机缓存
    3. hosts 文件
    4. 路由器缓存
    5. ISP DNS 缓存
    6. DNS 递归查询（可能存在负载均衡导致每次 IP 不一样）
-6. **打开一个 socket 与目标 IP 地址，端口建立 TCP 链接**，三次握手如下： 
+6. **打开一个 socket 与目标 IP 地址，端口建立 TCP 链接**，三次握手如下：
    1. 客户端发送一个 TCP 的**SYN=1，Seq=X**的包到服务器端口
    2. 服务器发回**SYN=1， ACK=X+1， Seq=Y**的响应包
    3. 客户端发送**ACK=Y+1， Seq=Z**
@@ -125,7 +124,7 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
 9. 服务器检查**HTTP 请求头是否包含缓存验证信息**如果验证缓存新鲜，返回**304**等对应状态码
 10. 处理程序读取完整请求并准备 HTTP 响应，可能需要查询数据库等操作
 11. 服务器将**响应报文通过 TCP 连接发送回浏览器**
-12. 浏览器接收 HTTP 响应，然后根据情况选择**关闭 TCP 连接或者保留重用，关闭 TCP 连接的四次握手如下**： 
+12. 浏览器接收 HTTP 响应，然后根据情况选择**关闭 TCP 连接或者保留重用，关闭 TCP 连接的四次握手如下**：
     1. 主动方发送**Fin=1， Ack=Z， Seq= X**报文
     2. 被动方发送**ACK=X+1， Seq=Z**报文
     3. 被动方发送**Fin=1， ACK=X， Seq=Y**报文
@@ -135,20 +134,20 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
 15. 对响应进行**解码**（例如 gzip 压缩）
 16. 根据资源类型决定如何处理（假设资源为 HTML 文档）
 17. **解析 HTML 文档，构件 DOM 树，下载资源，构造 CSSOM 树，执行 js 脚本**，这些操作没有严格的先后顺序，以下分别解释
-18. **构建 DOM 树**： 
+18. **构建 DOM 树**：
     1. **Tokenizing**：根据 HTML 规范将字符流解析为标记
     2. **Lexing**：词法分析将标记转换为对象并定义属性和规则
     3. **DOM construction**：根据 HTML 标记关系将对象组成 DOM 树
 19. 解析过程中遇到图片、样式表、js 文件，**启动下载**
-20. 构建**CSSOM 树**： 
+20. 构建**CSSOM 树**：
     1. **Tokenizing**：字符流转换为标记流
     2. **Node**：根据标记创建节点
     3. **CSSOM**：节点创建 CSSOM 树
-21. **[根据 DOM 树和 CSSOM 树构建渲染树](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction)**: 
+21. **[根据 DOM 树和 CSSOM 树构建渲染树](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction)**:
     1. 从 DOM 树的根节点遍历所有**可见节点**，不可见节点包括：1）`script`,`meta`这样本身不可见的标签。2)被 css 隐藏的节点，如`display: none`
     2. 对每一个可见节点，找到恰当的 CSSOM 规则并应用
     3. 发布可视节点的内容和计算样式
-22. **js 解析如下**： 
+22. **js 解析如下**：
     1. 浏览器创建 Document 对象并解析 HTML，将解析到的元素和文本节点添加到文档中，此时**document.readystate 为 loading**
     2. HTML 解析器遇到**没有 async 和 defer 的 script 时**，将他们添加到文档中，然后执行行内或外部脚本。这些脚本会同步执行，并且在脚本下载和执行时解析器会暂停。这样就可以用 document.write()把文本插入到输入流中。**同步脚本经常简单定义函数和注册事件处理程序，他们可以遍历和操作 script 和他们之前的文档内容**
     3. 当解析器遇到设置了**async**属性的 script 时，开始下载脚本并继续解析文档。脚本会在它**下载完成后尽快执行**，但是**解析器不会停下来等它下载**。异步脚本**禁止使用 document.write()**，它们可以访问自己 script 和之前的文档元素
@@ -169,20 +168,20 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
 3. 请求头和消息实体之间有一个**CRLF 分隔**
 4. 根据实际请求需要可能包含一个**消息实体** 一个请求报文例子如下：
 
-    GET /Protocols/rfc2616/rfc2616-sec5.html HTTP/1.1
-    Host: www.w3.org
-    Connection: keep-alive
-    Cache-Control: max-age=0
-    Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
-    User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
-    Referer: https://www.google.com.hk/
-    Accept-Encoding: gzip,deflate,sdch
-    Accept-Language: zh-CN,zh;q=0.8,en;q=0.6
-    Cookie: authorstyle=yes
-    If-None-Match: "2cc8-3e3073913b100"
-    If-Modified-Since: Wed, 01 Sep 2004 13:24:52 GMT
+   GET /Protocols/rfc2616/rfc2616-sec5.html HTTP/1.1
+   Host: www.w3.org
+   Connection: keep-alive
+   Cache-Control: max-age=0
+   Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,_/_;q=0.8
+   User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.153 Safari/537.36
+   Referer: https://www.google.com.hk/
+   Accept-Encoding: gzip,deflate,sdch
+   Accept-Language: zh-CN,zh;q=0.8,en;q=0.6
+   Cookie: authorstyle=yes
+   If-None-Match: "2cc8-3e3073913b100"
+   If-Modified-Since: Wed, 01 Sep 2004 13:24:52 GMT
 
-    name=qiu&age=25
+   name=qiu&age=25
 
 ### HTTP response 报文结构是怎样的
 
@@ -193,25 +192,25 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
 3. 响应头部和响应实体之间用**一个 CRLF 空行**分隔
 4. 最后是一个可能的**消息实体** 响应报文例子如下：
 
-    HTTP/1.1 200 OK
-    Date: Tue, 08 Jul 2014 05:28:43 GMT
-    Server: Apache/2
-    Last-Modified: Wed, 01 Sep 2004 13:24:52 GMT
-    ETag: "40d7-3e3073913b100"
-    Accept-Ranges: bytes
-    Content-Length: 16599
-    Cache-Control: max-age=21600
-    Expires: Tue, 08 Jul 2014 11:28:43 GMT
-    P3P: policyref="http://www.w3.org/2001/05/P3P/p3p.xml"
-    Content-Type: text/html; charset=iso-8859-1
+   HTTP/1.1 200 OK
+   Date: Tue, 08 Jul 2014 05:28:43 GMT
+   Server: Apache/2
+   Last-Modified: Wed, 01 Sep 2004 13:24:52 GMT
+   ETag: "40d7-3e3073913b100"
+   Accept-Ranges: bytes
+   Content-Length: 16599
+   Cache-Control: max-age=21600
+   Expires: Tue, 08 Jul 2014 11:28:43 GMT
+   P3P: policyref="http://www.w3.org/2001/05/P3P/p3p.xml"
+   Content-Type: text/html; charset=iso-8859-1
 
-    {"name": "qiu", "age": 25}
+   {"name": "qiu", "age": 25}
 
 ### 如何进行网站性能优化
 
 [雅虎 Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html)：
 
-* content 方面
+- content 方面
 
   1. 减少 HTTP 请求：合并文件、CSS 精灵、inline Image
   2. 减少 DNS 查询：DNS 查询完成之前浏览器不能从这个主机下载任何任何文件。方法：DNS 缓存、将资源分布到恰当数量的主机名，平衡并行下载和 DNS 查询
@@ -223,7 +222,8 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
   8. 将资源放到不同的域下：浏览器同时从一个域下载资源的数目有限，增加域可以提高并行下载量
   9. 减少 iframe 数量
   10. 不要 404
-* Server 方面
+
+- Server 方面
 
   1. 使用 CDN
   2. 添加 Expires 或者 Cache-Control 响应头
@@ -232,17 +232,20 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
   5. Flush Buffer Early
   6. Ajax 使用 GET 进行请求
   7. 避免空 src 的 img 标签
-* Cookie 方面
+
+- Cookie 方面
 
   1. 减小 cookie 大小
   2. 引入资源的域名不要包含 cookie
-* css 方面
+
+- css 方面
 
   1. 将样式表放到页面顶部
   2. 不使用 CSS 表达式
   3. 使用不使用@import
   4. 不使用 IE 的 Filter
-* Javascript 方面
+
+- Javascript 方面
 
   1. 将脚本放到页面底部
   2. 将 javascript 和 css 从外部引入
@@ -250,13 +253,15 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
   4. 删除不需要的脚本
   5. 减少 DOM 访问
   6. 合理设计事件监听器
-* 图片方面
+
+- 图片方面
 
   1. 优化图片：根据实际颜色需要选择色深、压缩
   2. 优化 css 精灵
   3. 不要在 HTML 中拉伸图片
   4. 保证 favicon.ico 小并且可缓存
-* 移动方面
+
+- 移动方面
 
   1. 保证组件小于 25k
   2. Pack Components into a Multipart Document
@@ -265,65 +270,65 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
 
 渐进增强是指在 web 设计时强调可访问性、语义化 HTML 标签、外部样式表和脚本。保证所有人都能访问页面的基本内容和功能同时为高级浏览器和高带宽用户提供更好的用户体验。核心原则如下:
 
-* 所有浏览器都必须能访问基本内容
-* 所有浏览器都必须能使用基本功能
-* 所有内容都包含在语义化标签中
-* 通过外部 CSS 提供增强的布局
-* 通过非侵入式、外部 javascript 提供增强功能
-* end-user web browser preferences are respected
+- 所有浏览器都必须能访问基本内容
+- 所有浏览器都必须能使用基本功能
+- 所有内容都包含在语义化标签中
+- 通过外部 CSS 提供增强的布局
+- 通过非侵入式、外部 javascript 提供增强功能
+- end-user web browser preferences are respected
 
 ### HTTP 状态码及其含义
 
 参考[RFC 2616](http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 
-* 1XX：信息状态码 
-  * **100 Continue**：客户端应当继续发送请求。这个临时相应是用来通知客户端它的部分请求已经被服务器接收，且仍未被拒绝。客户端应当继续发送请求的剩余部分，或者如果请求已经完成，忽略这个响应。服务器必须在请求完成后向客户端发送一个最终响应
-  * **101 Switching Protocols**：服务器已经理解 le 客户端的请求，并将通过 Upgrade 消息头通知客户端采用不同的协议来完成这个请求。在发送完这个响应最后的空行后，服务器将会切换到 Upgrade 消息头中定义的那些协议。
-* 2XX：成功状态码 
-  * **200 OK**：请求成功，请求所希望的响应头或数据体将随此响应返回
-  * **201 Created**：
-  * **202 Accepted**：
-  * **203 Non-Authoritative Information**：
-  * **204 No Content**：
-  * **205 Reset Content**：
-  * **206 Partial Content**：
-* 3XX：重定向 
-  * **300 Multiple Choices**：
-  * **301 Moved Permanently**：
-  * **302 Found**：
-  * **303 See Other**：
-  * **304 Not Modified**：
-  * **305 Use Proxy**：
-  * **306 （unused）**：
-  * **307 Temporary Redirect**：
-* 4XX：客户端错误 
-  * **400 Bad Request**:
-  * **401 Unauthorized**:
-  * **402 Payment Required**:
-  * **403 Forbidden**:
-  * **404 Not Found**:
-  * **405 Method Not Allowed**:
-  * **406 Not Acceptable**:
-  * **407 Proxy Authentication Required**:
-  * **408 Request Timeout**:
-  * **409 Conflict**:
-  * **410 Gone**:
-  * **411 Length Required**:
-  * **412 Precondition Failed**:
-  * **413 Request Entity Too Large**:
-  * **414 Request-URI Too Long**:
-  * **415 Unsupported Media Type**:
-  * **416 Requested Range Not Satisfiable**:
-  * **417 Expectation Failed**:
-* 5XX: 服务器错误 
-  * **500 Internal Server Error**:
-  * **501 Not Implemented**:
-  * **502 Bad Gateway**:
-  * **503 Service Unavailable**:
-  * **504 Gateway Timeout**:
-  * **505 HTTP Version Not Supported**:
+- 1XX：信息状态码
+  - **100 Continue**：客户端应当继续发送请求。这个临时相应是用来通知客户端它的部分请求已经被服务器接收，且仍未被拒绝。客户端应当继续发送请求的剩余部分，或者如果请求已经完成，忽略这个响应。服务器必须在请求完成后向客户端发送一个最终响应
+  - **101 Switching Protocols**：服务器已经理解 le 客户端的请求，并将通过 Upgrade 消息头通知客户端采用不同的协议来完成这个请求。在发送完这个响应最后的空行后，服务器将会切换到 Upgrade 消息头中定义的那些协议。
+- 2XX：成功状态码
+  - **200 OK**：请求成功，请求所希望的响应头或数据体将随此响应返回
+  - **201 Created**：
+  - **202 Accepted**：
+  - **203 Non-Authoritative Information**：
+  - **204 No Content**：
+  - **205 Reset Content**：
+  - **206 Partial Content**：
+- 3XX：重定向
+  - **300 Multiple Choices**：
+  - **301 Moved Permanently**：
+  - **302 Found**：
+  - **303 See Other**：
+  - **304 Not Modified**：
+  - **305 Use Proxy**：
+  - **306 （unused）**：
+  - **307 Temporary Redirect**：
+- 4XX：客户端错误
+  - **400 Bad Request**:
+  - **401 Unauthorized**:
+  - **402 Payment Required**:
+  - **403 Forbidden**:
+  - **404 Not Found**:
+  - **405 Method Not Allowed**:
+  - **406 Not Acceptable**:
+  - **407 Proxy Authentication Required**:
+  - **408 Request Timeout**:
+  - **409 Conflict**:
+  - **410 Gone**:
+  - **411 Length Required**:
+  - **412 Precondition Failed**:
+  - **413 Request Entity Too Large**:
+  - **414 Request-URI Too Long**:
+  - **415 Unsupported Media Type**:
+  - **416 Requested Range Not Satisfiable**:
+  - **417 Expectation Failed**:
+- 5XX: 服务器错误
+  - **500 Internal Server Error**:
+  - **501 Not Implemented**:
+  - **502 Bad Gateway**:
+  - **503 Service Unavailable**:
+  - **504 Gateway Timeout**:
+  - **505 HTTP Version Not Supported**:
 
-## $CSS 部分
+## \$CSS 部分
 
 ### CSS 选择器有哪些
 
@@ -342,7 +347,7 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
 13. **[attr|=value]**：选择属性值刚好为 value 或者 value-开头的元素
 14. **[attr^=value]**：选择属性值以 value 开头的元素
 15. **[attr$=value]**：选择属性值以 value 结尾的元素
-16. **[attr*=value]*\*：选择属性值中包含 value 的元素
+16. \*_[attr_=value]\*\*：选择属性值中包含 value 的元素
 17. **[:checked]**：选择单选框，复选框，下拉框中选中状态下的元素，兼容性：IE9+
 18. **X:after, X::after**：after 伪元素，选择元素虚拟子元素（元素的最后一个子元素），CSS3 中::表示伪元素。兼容性:after 为 IE8+，::after 为 IE9+
 19. **:hover**：鼠标移入状态的元素，兼容性 a 标签 IE4+， 所有元素 IE7+
@@ -389,140 +394,143 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
 
 原理：利用**不同浏览器对 CSS 的支持和解析结果不一样**编写针对特定浏览器样式。常见的 hack 有 1）属性 hack。2）选择器 hack。3）IE 条件注释
 
-* IE 条件注释：适用于[IE5, IE9]常见格式如下
+- IE 条件注释：适用于[IE5, IE9]常见格式如下
 
     <!--[if IE 6]>
     Special instructions for IE 6 here
     <![endif]-->
 
-* 选择器 hack：不同浏览器对选择器的支持不一样
+- 选择器 hack：不同浏览器对选择器的支持不一样
 
-    /***** Selector Hacks ******/
+  /**\*** Selector Hacks **\*\***/
 
-    /* IE6 and below */
-    * html #uno {
-      color: red;
+  /_ IE6 and below _/
+
+  - html #uno {
+    color: red;
     }
 
-    /* IE7 */
-    *:first-child + html #dos {
-      color: red;
-    }
+  /_ IE7 _/
+  \*:first-child + html #dos {
+  color: red;
+  }
 
-    /* IE7, FF, Saf, Opera  */
-    html > body #tres {
-      color: red;
-    }
+  /_ IE7, FF, Saf, Opera _/
+  html > body #tres {
+  color: red;
+  }
 
-    /* IE8, FF, Saf, Opera (Everything but IE 6,7) */
-    html>/**/body #cuatro {
-      color: red;
-    }
+  /_ IE8, FF, Saf, Opera (Everything but IE 6,7) _/
+  html>/\*\*/body #cuatro {
+  color: red;
+  }
 
-    /* Opera 9.27 and below, safari 2 */
-    html:first-child #cinco {
-      color: red;
-    }
+  /_ Opera 9.27 and below, safari 2 _/
+  html:first-child #cinco {
+  color: red;
+  }
 
-    /* Safari 2-3 */
-    html[xmlns*=''] body:last-child #seis {
-      color: red;
-    }
+  /_ Safari 2-3 _/
+  html[xmlns*=''] body:last-child #seis {
+  color: red;
+  }
 
-    /* safari 3+, chrome 1+, opera9+, ff 3.5+ */
-    body:nth-of-type(1) #siete {
-      color: red;
-    }
+  /_ safari 3+, chrome 1+, opera9+, ff 3.5+ _/
+  body:nth-of-type(1) #siete {
+  color: red;
+  }
 
-    /* safari 3+, chrome 1+, opera9+, ff 3.5+ */
-    body:first-of-type #ocho {
-      color: red;
-    }
+  /_ safari 3+, chrome 1+, opera9+, ff 3.5+ _/
+  body:first-of-type #ocho {
+  color: red;
+  }
 
-    /* saf3+, chrome1+ */
-    @media screen and (-webkit-min-device-pixel-ratio: 0) {
-      #diez {
-        color: red;
+  /_ saf3+, chrome1+ _/
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+  #diez {
+  color: red;
+  }
+  }
+
+  /_ iPhone / mobile webkit _/
+  @media screen and (max-device-width: 480px) {
+  #veintiseis {
+  color: red;
+  }
+  }
+
+  /_ Safari 2 - 3.1 _/
+  html[xmlns*='']:root #trece {
+  color: red;
+  }
+
+  /_ Safari 2 - 3.1, Opera 9.25 _/
+  _|html[xmlns_=''] #catorce {
+  color: red;
+  }
+
+  /_ Everything but IE6-8 _/
+  :root \* > #quince {
+  color: red;
+  }
+
+  /_ IE7 _/
+
+  - - html #dieciocho {
+      color: red;
       }
-    }
 
-    /* iPhone / mobile webkit */
-    @media screen and (max-device-width: 480px) {
-      #veintiseis {
-        color: red;
-      }
-    }
+  /_ Firefox only. 1+ _/
+  #veinticuatro,
+  x:-moz-any-link {
+  color: red;
+  }
 
-    /* Safari 2 - 3.1 */
-    html[xmlns*='']:root #trece {
-      color: red;
-    }
+  /_ Firefox 3.0+ _/
+  #veinticinco,
+  x:-moz-any-link,
+  x:default {
+  color: red;
+  }
 
-    /* Safari 2 - 3.1, Opera 9.25 */
-    *|html[xmlns*=''] #catorce {
-      color: red;
-    }
+- 属性 hack：不同浏览器解析 bug 或方法
 
-    /* Everything but IE6-8 */
-    :root * > #quince {
-      color: red;
-    }
+  /_ IE6 _/
+  #once { \_color: blue }
 
-    /* IE7 */
-    * + html #dieciocho {
-      color: red;
-    }
+  /_ IE6, IE7 _/
+  #doce { _color: blue; /_ or #color: blue \*/ }
 
-    /* Firefox only. 1+ */
-    #veinticuatro,
-    x:-moz-any-link {
-      color: red;
-    }
+  /_ Everything but IE6 _/
+  #diecisiete { color/\*\*/: blue }
 
-    /* Firefox 3.0+ */
-    #veinticinco,
-    x:-moz-any-link,
-    x:default {
-      color: red;
-    }
+  /_ IE6, IE7, IE8 _/
+  #diecinueve { color: blue\9; }
 
-* 属性 hack：不同浏览器解析 bug 或方法
+  /_ IE7, IE8 _/
+  #veinte { color/\*\*\*/: blue\9; }
 
-    /* IE6 */
-    #once { _color: blue }
-
-    /* IE6, IE7 */
-    #doce { *color: blue; /* or #color: blue */ }
-
-    /* Everything but IE6 */
-    #diecisiete { color/**/: blue }
-
-    /* IE6, IE7, IE8 */
-    #diecinueve { color: blue\9; }
-
-    /* IE7, IE8 */
-    #veinte { color/*\**/: blue\9; }
-
-    /* IE6, IE7 -- acts as an !important */
-    #veintesiete { color: blue !ie; } /* string after ! can be anything */
+  /_ IE6, IE7 -- acts as an !important _/
+  #veintesiete { color: blue !ie; } /_ string after ! can be anything _/
 
 ### specified value,computed value,used value 计算方法
 
-* specified value: 计算方法如下：
+- specified value: 计算方法如下：
 
   1. 如果样式表设置了一个值，使用这个值
   2. 如果没有设值，且这个属性是继承属性，从父元素继承
   3. 如果没有设值，并且不是继承属性，则使用 css 规范指定的初始值
-* computed value: 以 specified value 根据规范定义的行为进行计算，通常将相对值计算为绝对值，例如 em 根据 font-size 进行计算。一些使用百分数并且需要布局来决定最终值的属性，如 width，margin。百分数就直接作为 computed value。line-height 的无单位值也直接作为 computed value。这些值将在计算 used value 时得到绝对值。**computed value 的主要作用是用于继承**
-* used value：属性计算后的最终值，对于大多数属性可以通过 window.getComputedStyle 获得，尺寸值单位为像素。以下属性依赖于布局，
 
-  * background-position
-  * bottom, left, right, top
-  * height, width
-  * margin-bottom, margin-left, margin-right, margin-top
-  * min-height, min-width
-  * padding-bottom, padding-left, padding-right, padding-top
-  * text-indent
+- computed value: 以 specified value 根据规范定义的行为进行计算，通常将相对值计算为绝对值，例如 em 根据 font-size 进行计算。一些使用百分数并且需要布局来决定最终值的属性，如 width，margin。百分数就直接作为 computed value。line-height 的无单位值也直接作为 computed value。这些值将在计算 used value 时得到绝对值。**computed value 的主要作用是用于继承**
+- used value：属性计算后的最终值，对于大多数属性可以通过 window.getComputedStyle 获得，尺寸值单位为像素。以下属性依赖于布局，
+
+  - background-position
+  - bottom, left, right, top
+  - height, width
+  - margin-bottom, margin-left, margin-right, margin-top
+  - min-height, min-width
+  - padding-bottom, padding-left, padding-right, padding-top
+  - text-indent
 
 ### `link`与`@import`的区别
 
@@ -569,34 +577,34 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
 
 ### CSS 有哪些继承属性
 
-* 关于文字排版的属性如： 
-  * [font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
-  * [word-break](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break)
-  * [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
-  * [text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
-  * [text-rendering](https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering)
-  * [word-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing)
-  * [white-space](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space)
-  * [text-indent](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
-  * [text-transform](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
-  * [text-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
-* [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
-* [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
-* [visibility](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)
-* [cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
+- 关于文字排版的属性如：
+  - [font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+  - [word-break](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break)
+  - [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+  - [text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+  - [text-rendering](https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering)
+  - [word-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing)
+  - [white-space](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space)
+  - [text-indent](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
+  - [text-transform](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+  - [text-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+- [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+- [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+- [visibility](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)
+- [cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
 
 ### IE6 浏览器有哪些常见的 bug,缺陷或者与标准不一致的地方,如何解决
 
-* IE6 不支持 min-height，解决办法使用 css hack：
+- IE6 不支持 min-height，解决办法使用 css hack：
 
-    .target {
-        min-height: 100px;
-        height: auto !important;
-        height: 100px;   // IE6下内容高度超过会自动扩展高度
-    }
+  .target {
+  min-height: 100px;
+  height: auto !important;
+  height: 100px; // IE6 下内容高度超过会自动扩展高度
+  }
 
-* `ol`内`li`的序号全为 1，不递增。解决方法：为 li 设置样式`display: list-item;`
-* 未定位父元素`overflow: auto;`，包含`position: relative;`子元素，子元素高于父元素时会溢出。解决办法：1）子元素去掉`position: relative;`; 2）不能为子元素去掉定位时，父元素`position: relative;`
+- `ol`内`li`的序号全为 1，不递增。解决方法：为 li 设置样式`display: list-item;`
+- 未定位父元素`overflow: auto;`，包含`position: relative;`子元素，子元素高于父元素时会溢出。解决办法：1）子元素去掉`position: relative;`; 2）不能为子元素去掉定位时，父元素`position: relative;`
 
     <style type="text/css">
     .outer {
@@ -618,7 +626,7 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
         <div class="inner"></div>
     </div>
 
-* IE6 只支持`a`标签的`:hover`伪类，解决方法：使用 js 为元素监听 mouseenter，mouseleave 事件，添加类实现效果：
+- IE6 只支持`a`标签的`:hover`伪类，解决方法：使用 js 为元素监听 mouseenter，mouseleave 事件，添加类实现效果：
 
     <style type="text/css">
     .p:hover,
@@ -642,7 +650,7 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
         var reg = new RegExp(' +' + cls + ' +', 'g');
         elem.className = className.replace(reg, ' ').replace(/^ +| +$/, '');
     }
-
+  
     var target = document.getElementById('target');
     if (target.attachEvent) {
         target.attachEvent('onmouseenter', function () {
@@ -654,24 +662,24 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
     }
     </script>
 
-* IE5-8 不支持`opacity`，解决办法：
+- IE5-8 不支持`opacity`，解决办法：
 
-    .opacity {
-        opacity: 0.4
-        filter: alpha(opacity=60); /* for IE5-7 */
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; /* for IE 8*/
-    }
+  .opacity {
+  opacity: 0.4
+  filter: alpha(opacity=60); /_ for IE5-7 _/
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; /_ for IE 8_/
+  }
 
-* IE6 在设置`height`小于`font-size`时高度值为`font-size`，解决办法：`font-size: 0;`
-* IE6 不支持 PNG 透明背景，解决办法: **IE6 下使用 gif 图片**
-* IE6-7 不支持`display: inline-block`解决办法：设置 inline 并触发 hasLayout
+- IE6 在设置`height`小于`font-size`时高度值为`font-size`，解决办法：`font-size: 0;`
+- IE6 不支持 PNG 透明背景，解决办法: **IE6 下使用 gif 图片**
+- IE6-7 不支持`display: inline-block`解决办法：设置 inline 并触发 hasLayout
 
         display: inline-block;
         *display: inline;
         *zoom: 1;
 
-* IE6 下浮动元素在浮动方向上与父元素边界接触元素的外边距会加倍。解决办法： 1）使用 padding 控制间距。 2）浮动元素`display: inline;`这样解决问题且无任何副作用：css 标准规定浮动元素 display:inline 会自动调整为 block
-* 通过为块级元素设置宽度和左右 margin 为 auto 时，IE6 不能实现水平居中，解决方法：为父元素设置`text-align: center;`
+- IE6 下浮动元素在浮动方向上与父元素边界接触元素的外边距会加倍。解决办法： 1）使用 padding 控制间距。 2）浮动元素`display: inline;`这样解决问题且无任何副作用：css 标准规定浮动元素 display:inline 会自动调整为 block
+- 通过为块级元素设置宽度和左右 margin 为 auto 时，IE6 不能实现水平居中，解决方法：为父元素设置`text-align: center;`
 
 ### 容器包含若干浮动元素时如何清理(包含)浮动
 
@@ -679,32 +687,33 @@ web 语义化是指通过 HTML 标记表示页面包含的信息，包含了 HTM
 2. 父元素触发块级格式化上下文(见块级可视化上下文部分)
 3. 设置容器元素伪元素进行清理[推荐的清理浮动方法](http://nicolasgallagher.com/micro-clearfix-hack/)
 
-    /**
-    * 在标准浏览器下使用
-    * 1 content内容为空格用于修复opera下文档中出现
-    *   contenteditable属性时在清理浮动元素上下的空白
-    * 2 使用display使用table而不是block：可以防止容器和
-    *   子元素top-margin折叠,这样能使清理效果与BFC，IE6/7
-    *   zoom: 1;一致
-    **/
+   /\*\*
 
-    .clearfix:before,
-    .clearfix:after {
-        content: " "; /* 1 */
-        display: table; /* 2 */
-    }
+   - 在标准浏览器下使用
+   - 1 content 内容为空格用于修复 opera 下文档中出现
+   - contenteditable 属性时在清理浮动元素上下的空白
+   - 2 使用 display 使用 table 而不是 block：可以防止容器和
+   - 子元素 top-margin 折叠,这样能使清理效果与 BFC，IE6/7
+   - zoom: 1;一致
+     \*\*/
 
-    .clearfix:after {
-        clear: both;
-    }
+   .clearfix:before,
+   .clearfix:after {
+   content: " "; /_ 1 _/
+   display: table; /_ 2 _/
+   }
 
-    /**
-    * IE 6/7下使用
-    * 通过触发hasLayout实现包含浮动
-    **/
-    .clearfix {
-        *zoom: 1;
-    }
+   .clearfix:after {
+   clear: both;
+   }
+
+   /\*\*
+
+   - IE 6/7 下使用
+   - 通过触发 hasLayout 实现包含浮动 \**/
+     .clearfix {
+     *zoom: 1;
+     }
 
 ### 什么是 FOUC?如何避免
 
@@ -750,10 +759,10 @@ Flash Of Unstyled Content：用户定义样式表加载之前浏览器使用默�
 3. 如果元素`position`为`fixed`。对于连续媒体，它的包含块为 viewport；对于 paged media，包含块为 page area
 4. 如果元素`position`为`absolute`，它的包含块由祖先元素中最近一个`position`为`relative`,`absolute`或者`fixed`的元素产生，规则如下：
 
-  * 如果祖先元素为行内元素，the containing block is the bounding box around the **padding boxes** of the first and the last inline boxes generated for that element.
-  * 其他情况下包含块由祖先节点的**padding edge**组成
+- 如果祖先元素为行内元素，the containing block is the bounding box around the **padding boxes** of the first and the last inline boxes generated for that element.
+- 其他情况下包含块由祖先节点的**padding edge**组成
 
-  如果找不到定位的祖先元素，包含块为**初始包含块**
+如果找不到定位的祖先元素，包含块为**初始包含块**
 
 ### stacking context,布局规则
 
@@ -774,8 +783,8 @@ z 轴上的默认层叠顺序如下（从下到上）：
 
 ### 如何水平居中一个元素
 
-* 如果需要居中的元素为**常规流中 inline 元素**，为父元素设置`text-align: center;`即可实现
-* 如果需要居中的元素为**常规流中 block 元素**，1）为元素设置宽度，2）设置左右 margin 为 auto。3）IE6 下需在父元素上设置`text-align: center;`,再给子元素恢复需要的值
+- 如果需要居中的元素为**常规流中 inline 元素**，为父元素设置`text-align: center;`即可实现
+- 如果需要居中的元素为**常规流中 block 元素**，1）为元素设置宽度，2）设置左右 margin 为 auto。3）IE6 下需在父元素上设置`text-align: center;`,再给子元素恢复需要的值
 
     <body>
         <div class="content">
@@ -792,12 +801,12 @@ z 轴上的默认层叠顺序如下（从下到上）：
             width: 500px;      /* 1 */
             text-align: left;  /* 3 */
             margin: 0 auto;    /* 2 */
-
+  
             background: purple;
         }
     </style>
 
-* 如果需要居中的元素为**浮动元素**，1）为元素设置宽度，2）`position: relative;`，3）浮动方向偏移量（left 或者 right）设置为 50%，4）浮动方向上的 margin 设置为元素宽度一半乘以-1
+- 如果需要居中的元素为**浮动元素**，1）为元素设置宽度，2）`position: relative;`，3）浮动方向偏移量（left 或者 right）设置为 50%，4）浮动方向上的 margin 设置为元素宽度一半乘以-1
 
     <body>
         <div class="content">
@@ -812,16 +821,16 @@ z 轴上的默认层叠顺序如下（从下到上）：
         .content {
             width: 500px;         /* 1 */
             float: left;
-
+  
             position: relative;   /* 2 */
             left: 50%;            /* 3 */
             margin-left: -250px;  /* 4 */
-
+  
             background-color: purple;
         }
     </style>
 
-* 如果需要居中的元素为**绝对定位元素**，1）为元素设置宽度，2）偏移量设置为 50%，3）偏移方向外边距设置为元素宽度一半乘以-1
+- 如果需要居中的元素为**绝对定位元素**，1）为元素设置宽度，2）偏移量设置为 50%，3）偏移方向外边距设置为元素宽度一半乘以-1
 
     <body>
         <div class="content">
@@ -836,16 +845,16 @@ z 轴上的默认层叠顺序如下（从下到上）：
         }
         .content {
             width: 800px;
-
+  
             position: absolute;
             left: 50%;
             margin-left: -400px;
-
+  
             background-color: purple;
         }
     </style>
 
-* 如果需要居中的元素为**绝对定位元素**，1）为元素设置宽度，2）设置左右偏移量都为 0,3）设置左右外边距都为 auto
+- 如果需要居中的元素为**绝对定位元素**，1）为元素设置宽度，2）设置左右偏移量都为 0,3）设置左右外边距都为 auto
 
     <body>
         <div class="content">
@@ -860,12 +869,12 @@ z 轴上的默认层叠顺序如下（从下到上）：
         }
         .content {
             width: 800px;
-
+  
             position: absolute;
             margin: 0 auto;
             left: 0;
             right: 0;
-
+  
             background-color: purple;
         }
     </style>
@@ -874,7 +883,7 @@ z 轴上的默认层叠顺序如下（从下到上）：
 
 参考资料：[6 Methods For Vertical Centering With CSS](http://www.vanseodesign.com/css/vertical-centering/)。 [盘点 8 种 CSS 实现垂直居中](http://blog.csdn.net/freshlover/article/details/11579669)
 
-* 需要居中元素为**单行文本**，为包含文本的元素设置大于`font-size`的`line-height`：
+- 需要居中元素为**单行文本**，为包含文本的元素设置大于`font-size`的`line-height`：
 
     <p class="text">center text</p>
 
@@ -884,26 +893,26 @@ z 轴上的默认层叠顺序如下（从下到上）：
     }
     </style>
 
-## $javascript 概念部分
+## \$javascript 概念部分
 
 ### DOM 元素 e 的 e.getAttribute(propName)和 e.propName 有什么区别和联系
 
-* e.getAttribute()，是标准 DOM 操作文档元素属性的方法，具有通用性可在任意文档上使用，返回元素在源文件中**设置的属性**
-* e.propName 通常是在 HTML 文档中访问特定元素的**特性**，浏览器解析元素后生成对应对象（如 a 标签生成 HTMLAnchorElement），这些对象的特性会根据特定规则结合属性设置得到，对于没有对应特性的属性，只能使用 getAttribute 进行访问
-* e.getAttribute()返回值是源文件中设置的值，类型是字符串或者 null（有的实现返回""）
-* e.propName 返回值可能是字符串、布尔值、对象、undefined 等
-* 大部分 attribute 与 property 是一一对应关系，修改其中一个会影响另一个，如 id，title 等属性
-* 一些布尔属性`<input hidden/>`的检测设置需要 hasAttribute 和 removeAttribute 来完成，或者设置对应 property
-* 像`<a href="../index.html">link</a>`中 href 属性，转换成 property 的时候需要通过转换得到完整 URL
-* 一些 attribute 和 property 不是一一对应如：form 控件中`<input value="hello"/>`对应的是 defaultValue，修改或设置 value property 修改的是控件当前值，setAttribute 修改 value 属性不会改变 value property
+- e.getAttribute()，是标准 DOM 操作文档元素属性的方法，具有通用性可在任意文档上使用，返回元素在源文件中**设置的属性**
+- e.propName 通常是在 HTML 文档中访问特定元素的**特性**，浏览器解析元素后生成对应对象（如 a 标签生成 HTMLAnchorElement），这些对象的特性会根据特定规则结合属性设置得到，对于没有对应特性的属性，只能使用 getAttribute 进行访问
+- e.getAttribute()返回值是源文件中设置的值，类型是字符串或者 null（有的实现返回""）
+- e.propName 返回值可能是字符串、布尔值、对象、undefined 等
+- 大部分 attribute 与 property 是一一对应关系，修改其中一个会影响另一个，如 id，title 等属性
+- 一些布尔属性`<input hidden/>`的检测设置需要 hasAttribute 和 removeAttribute 来完成，或者设置对应 property
+- 像`<a href="../index.html">link</a>`中 href 属性，转换成 property 的时候需要通过转换得到完整 URL
+- 一些 attribute 和 property 不是一一对应如：form 控件中`<input value="hello"/>`对应的是 defaultValue，修改或设置 value property 修改的是控件当前值，setAttribute 修改 value 属性不会改变 value property
 
 ### offsetWidth/offsetHeight,clientWidth/clientHeight 与 scrollWidth/scrollHeight 的区别
 
-* offsetWidth/offsetHeight 返回值包含**content + padding + border**，效果与 e.getBoundingClientRect()相同
-* clientWidth/clientHeight 返回值只包含**content + padding**，如果有滚动条，也**不包含滚动条**
-* scrollWidth/scrollHeight 返回值包含**content + padding + 溢出内容的尺寸**
+- offsetWidth/offsetHeight 返回值包含**content + padding + border**，效果与 e.getBoundingClientRect()相同
+- clientWidth/clientHeight 返回值只包含**content + padding**，如果有滚动条，也**不包含滚动条**
+- scrollWidth/scrollHeight 返回值包含**content + padding + 溢出内容的尺寸**
 
-[Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](http://msdn.microsoft.com/en-us/library/ie/hh781509(v=vs.85).aspx)
+[Measuring Element Dimension and Location with CSSOM in Windows Internet Explorer 9](<http://msdn.microsoft.com/en-us/library/ie/hh781509(v=vs.85).aspx>)
 
 [![元素尺寸](https://github.com/qiu-deqing/FE-interview/raw/master/img/element-size.png)](https://github.com/qiu-deqing/FE-interview/blob/master/img/element-size.png)
 
@@ -911,11 +920,11 @@ z 轴上的默认层叠顺序如下（从下到上）：
 
 1. `readyState`:表示请求状态的整数，取值：
 
-* UNSENT（0）：对象已创建
-* OPENED（1）：open()成功调用，在这个状态下，可以为 xhr 设置请求头，或者使用 send()发送请求
-* HEADERS\_RECEIVED(2)：所有重定向已经自动完成访问，并且最终响应的 HTTP 头已经收到
-* LOADING(3)：响应体正在接收
-* DONE(4)：数据传输完成或者传输产生错误
+- UNSENT（0）：对象已创建
+- OPENED（1）：open()成功调用，在这个状态下，可以为 xhr 设置请求头，或者使用 send()发送请求
+- HEADERS_RECEIVED(2)：所有重定向已经自动完成访问，并且最终响应的 HTTP 头已经收到
+- LOADING(3)：响应体正在接收
+- DONE(4)：数据传输完成或者传输产生错误
 
 1. `onreadystatechange`：readyState 改变时调用的函数
 2. `status`：服务器返回的 HTTP 状态码（如，200， 404）
@@ -933,11 +942,11 @@ z 轴上的默认层叠顺序如下（从下到上）：
 
 1. focus/blur 不冒泡，focusin/focusout 冒泡
 2. focus/blur 兼容性好，focusin/focusout 在除 FireFox 外的浏览器下都保持良好兼容性，如需使用事件托管，可考虑在 FireFox 下使用事件捕获 elem.addEventListener('focus', handler, true)
-3. 可获得焦点的元素： 
-  1. window
-  2. 链接被点击或键盘操作
-  3. 表单空间被点击或键盘操作
-  4. 设置`tabindex`属性的元素被点击或键盘操作
+3. 可获得焦点的元素：
+4. window
+5. 链接被点击或键盘操作
+6. 表单空间被点击或键盘操作
+7. 设置`tabindex`属性的元素被点击或键盘操作
 
 ### mouseover/mouseout 与 mouseenter/mouseleave 的区别与联系
 
@@ -1005,26 +1014,26 @@ z 轴上的默认层叠顺序如下（从下到上）：
 
 跨域通信：js 进行 DOM 操作、通信时如果目标与当前窗口不满足同源条件，浏览器为了安全会阻止跨域操作。跨域通信通常有以下方法
 
-* 如果是 log 之类的简单**单项通信**，新建`<img>`,`<script>`,`<link>`,`<iframe>`元素，通过 src，href 属性设置为目标 url。实现跨域请求
-* 如果请求**json 数据**，使用`<script>`进行 jsonp 请求
-* 现代浏览器中**多窗口通信**使用 HTML5 规范的 targetWindow.postMessage(data, origin);其中 data 是需要发送的对象，origin 是目标窗口的 origin。window.addEventListener('message', handler, false);handler 的 event.data 是 postMessage 发送来的数据，event.origin 是发送窗口的 origin，event.source 是发送消息的窗口引用
-* 内部服务器代理请求跨域 url，然后返回数据
-* 跨域请求数据，现代浏览器可使用 HTML5 规范的 CORS 功能，只要目标服务器返回 HTTP 头部\*\*`Access-Control-Allow-Origin: *`\*\*即可像普通 ajax 一样访问跨域资源
+- 如果是 log 之类的简单**单项通信**，新建`<img>`,`<script>`,`<link>`,`<iframe>`元素，通过 src，href 属性设置为目标 url。实现跨域请求
+- 如果请求**json 数据**，使用`<script>`进行 jsonp 请求
+- 现代浏览器中**多窗口通信**使用 HTML5 规范的 targetWindow.postMessage(data, origin);其中 data 是需要发送的对象，origin 是目标窗口的 origin。window.addEventListener('message', handler, false);handler 的 event.data 是 postMessage 发送来的数据，event.origin 是发送窗口的 origin，event.source 是发送消息的窗口引用
+- 内部服务器代理请求跨域 url，然后返回数据
+- 跨域请求数据，现代浏览器可使用 HTML5 规范的 CORS 功能，只要目标服务器返回 HTTP 头部\*\*`Access-Control-Allow-Origin: *`\*\*即可像普通 ajax 一样访问跨域资源
 
 ### javascript 有哪几种数据类型
 
 六种基本数据类型
 
-* undefined
-* null
-* string
-* boolean
-* number
-* [symbol](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)(ES6)
+- undefined
+- null
+- string
+- boolean
+- number
+- [symbol](https://developer.mozilla.org/en-US/docs/Glossary/Symbol)(ES6)
 
 一种引用类型
 
-* Object
+- Object
 
 ### 什么闭包,闭包有什么用
 
@@ -1046,7 +1055,7 @@ z 轴上的默认层叠顺序如下（从下到上）：
 3. [Function 构造函数](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function)
 4. [ES6:arrow function](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/arrow_functions)
 
-重要参考资料：[MDN:Functions\_and\_function\_scope](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope)
+重要参考资料：[MDN:Functions_and_function_scope](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions_and_function_scope)
 
 ### 应用程序存储和离线 web 应用
 
@@ -1067,42 +1076,42 @@ HTML5 新增应用程序缓存，允许 web 应用将应用程序自身保存到
 
 ### 客户端存储 localStorage 和 sessionStorage
 
-* localStorage 有效期为永久，sessionStorage 有效期为顶层窗口关闭前
-* 同源文档可以读取并修改 localStorage 数据，sessionStorage 只允许同一个窗口下的文档访问，如通过 iframe 引入的同源文档。
-* Storage 对象通常被当做普通 javascript 对象使用：**通过设置属性来存取字符串值**，也可以通过**setItem(key, value)设置**，**getItem(key)读取**，**removeItem(key)删除**，**clear()删除所有数据**，**length 表示已存储的数据项数目**，**key(index)返回对应索引的 key**
+- localStorage 有效期为永久，sessionStorage 有效期为顶层窗口关闭前
+- 同源文档可以读取并修改 localStorage 数据，sessionStorage 只允许同一个窗口下的文档访问，如通过 iframe 引入的同源文档。
+- Storage 对象通常被当做普通 javascript 对象使用：**通过设置属性来存取字符串值**，也可以通过**setItem(key, value)设置**，**getItem(key)读取**，**removeItem(key)删除**，**clear()删除所有数据**，**length 表示已存储的数据项数目**，**key(index)返回对应索引的 key**
 
-    localStorage.setItem('x', 1); // storge x->1
-    localStorage.getItem('x); // return value of x
+  localStorage.setItem('x', 1); // storge x->1
+  localStorage.getItem('x); // return value of x
 
-    // 枚举所有存储的键值对
-    for (var i = 0, len = localStorage.length; i < len; ++i ) {
-        var name = localStorage.key(i);
-        var value = localStorage.getItem(name);
-    }
+  // 枚举所有存储的键值对
+  for (var i = 0, len = localStorage.length; i < len; ++i ) {
+  var name = localStorage.key(i);
+  var value = localStorage.getItem(name);
+  }
 
-    localStorage.removeItem('x'); // remove x
-    localStorage.clear();  // remove all data
+  localStorage.removeItem('x'); // remove x
+  localStorage.clear(); // remove all data
 
 ### cookie 及其操作
 
-* cookie 是 web 浏览器存储的少量数据，最早设计为服务器端使用，作为 HTTP 协议的扩展实现。cookie 数据会自动在浏览器和服务器之间传输。
-* 通过读写 cookie 检测是否支持
-* cookie 属性有**名**，**值**，**max-age**，**path**, **domain**，**secure**；
-* cookie 默认有效期为浏览器会话，一旦用户关闭浏览器，数据就丢失，通过设置**max-age=seconds**属性告诉浏览器 cookie 有效期
-* cookie 作用域通过**文档源**和**文档路径**来确定，通过**path**和**domain**进行配置，web 页面同目录或子目录文档都可访问
-* 通过 cookie 保存数据的方法为：为 document.cookie 设置一个符合目标的字符串如下
-* 读取 document.cookie 获得'; '分隔的字符串，key=value,解析得到结果
+- cookie 是 web 浏览器存储的少量数据，最早设计为服务器端使用，作为 HTTP 协议的扩展实现。cookie 数据会自动在浏览器和服务器之间传输。
+- 通过读写 cookie 检测是否支持
+- cookie 属性有**名**，**值**，**max-age**，**path**, **domain**，**secure**；
+- cookie 默认有效期为浏览器会话，一旦用户关闭浏览器，数据就丢失，通过设置**max-age=seconds**属性告诉浏览器 cookie 有效期
+- cookie 作用域通过**文档源**和**文档路径**来确定，通过**path**和**domain**进行配置，web 页面同目录或子目录文档都可访问
+- 通过 cookie 保存数据的方法为：为 document.cookie 设置一个符合目标的字符串如下
+- 读取 document.cookie 获得'; '分隔的字符串，key=value,解析得到结果
 
-    document.cookie = 'name=qiu; max-age=9999; path=/; domain=domain; secure';
+  document.cookie = 'name=qiu; max-age=9999; path=/; domain=domain; secure';
 
-    document.cookie = 'name=aaa; path=/; domain=domain; secure';
-    // 要改变cookie的值，需要使用相同的名字、路径和域，新的值
-    // 来设置cookie，同样的方法可以用来改变有效期
+  document.cookie = 'name=aaa; path=/; domain=domain; secure';
+  // 要改变 cookie 的值，需要使用相同的名字、路径和域，新的值
+  // 来设置 cookie，同样的方法可以用来改变有效期
 
-    // 设置max-age为0可以删除指定cookie
+  // 设置 max-age 为 0 可以删除指定 cookie
 
-    //读取cookie，访问document.cookie返回键值对组成的字符串，
-    //不同键值对之间用'; '分隔。通过解析获得需要的值
+  //读取 cookie，访问 document.cookie 返回键值对组成的字符串，
+  //不同键值对之间用'; '分隔。通过解析获得需要的值
 
 [cookieUtil.js](https://github.com/qiu-deqing/google/blob/master/module/js/cookieUtil.js)：自己写的 cookie 操作工具
 
@@ -1160,84 +1169,85 @@ HTML5 新增应用程序缓存，允许 web 应用将应用程序自身保存到
 
 ### 函数内部 arguments 变量有哪些特性,有哪些属性,如何将它转换为数组
 
-* arguments 所有函数中都包含的一个局部变量，是一个类数组对象，对应函数调用时的实参。如果函数定义同名参数会在调用时覆盖默认对象
-* arguments[index]分别对应函数调用时的实参，并且通过 arguments 修改实参时会同时修改实参
-* arguments.length 为实参的个数（Function.length 表示形参长度）
-* arguments.callee 为当前正在执行的函数本身，使用这个属性进行递归调用时需注意 this 的变化
-* arguments.caller 为调用当前函数的函数（已被遗弃）
-* 转换为数组：`var args = Array.prototype.slice.call(arguments, 0);`
+- arguments 所有函数中都包含的一个局部变量，是一个类数组对象，对应函数调用时的实参。如果函数定义同名参数会在调用时覆盖默认对象
+- arguments[index]分别对应函数调用时的实参，并且通过 arguments 修改实参时会同时修改实参
+- arguments.length 为实参的个数（Function.length 表示形参长度）
+- arguments.callee 为当前正在执行的函数本身，使用这个属性进行递归调用时需注意 this 的变化
+- arguments.caller 为调用当前函数的函数（已被遗弃）
+- 转换为数组：`var args = Array.prototype.slice.call(arguments, 0);`
 
 ### DOM 事件模型是如何的,编写一个 EventUtil 工具类实现事件管理兼容
 
-* DOM 事件包含捕获（capture）和冒泡（bubble）两个阶段：捕获阶段事件从 window 开始触发事件然后通过祖先节点一次传递到触发事件的 DOM 元素上；冒泡阶段事件从初始元素依次向祖先节点传递直到 window
-* 标准事件监听 elem.addEventListener(type, handler, capture)/elem.removeEventListener(type, handler, capture)：handler 接收保存事件信息的 event 对象作为参数，event.target 为触发事件的对象，handler 调用上下文 this 为绑定监听器的对象，event.preventDefault()取消事件默认行为，event.stopPropagation()/event.stopImmediatePropagation()取消事件传递
-* 老版本 IE 事件监听 elem.attachEvent('on'+type, handler)/elem.detachEvent('on'+type, handler)：handler 不接收 event 作为参数，事件信息保存在 window.event 中，触发事件的对象为 event.srcElement，handler 执行上下文 this 为 window 使用闭包中调用 handler.call(elem, event)可模仿标准模型，然后返回闭包，保证了监听器的移除。event.returnValue 为 false 时取消事件默认行为，event.cancleBubble 为 true 时取消时间传播
-* 通常利用事件冒泡机制托管事件处理程序提高程序性能。
+- DOM 事件包含捕获（capture）和冒泡（bubble）两个阶段：捕获阶段事件从 window 开始触发事件然后通过祖先节点一次传递到触发事件的 DOM 元素上；冒泡阶段事件从初始元素依次向祖先节点传递直到 window
+- 标准事件监听 elem.addEventListener(type, handler, capture)/elem.removeEventListener(type, handler, capture)：handler 接收保存事件信息的 event 对象作为参数，event.target 为触发事件的对象，handler 调用上下文 this 为绑定监听器的对象，event.preventDefault()取消事件默认行为，event.stopPropagation()/event.stopImmediatePropagation()取消事件传递
+- 老版本 IE 事件监听 elem.attachEvent('on'+type, handler)/elem.detachEvent('on'+type, handler)：handler 不接收 event 作为参数，事件信息保存在 window.event 中，触发事件的对象为 event.srcElement，handler 执行上下文 this 为 window 使用闭包中调用 handler.call(elem, event)可模仿标准模型，然后返回闭包，保证了监听器的移除。event.returnValue 为 false 时取消事件默认行为，event.cancleBubble 为 true 时取消时间传播
+- 通常利用事件冒泡机制托管事件处理程序提高程序性能。
 
-    /**
-     * 跨浏览器事件处理工具。只支持冒泡。不支持捕获
-     * @author  (qiu_deqing@126.com)
-     */
+  /\*\*
 
-    var EventUtil = {
-        getEvent: function (event) {
-            return event || window.event;
-        },
-        getTarget: function (event) {
-            return event.target || event.srcElement;
-        },
-        // 返回注册成功的监听器，IE中需要使用返回值来移除监听器
-        on: function (elem, type, handler) {
-            if (elem.addEventListener) {
-                elem.addEventListener(type, handler, false);
-                return handler;
-            } else if (elem.attachEvent) {
-                var wrapper = function () {
-                  var event = window.event;
-                  event.target = event.srcElement;
-                  handler.call(elem, event);
-                };
-                elem.attachEvent('on' + type, wrapper);
-                return wrapper;
-            }
-        },
-        off: function (elem, type, handler) {
-            if (elem.removeEventListener) {
-                elem.removeEventListener(type, handler, false);
-            } else if (elem.detachEvent) {
-                elem.detachEvent('on' + type, handler);
-            }
-        },
-        preventDefault: function (event) {
-            if (event.preventDefault) {
-                event.preventDefault();
-            } else if ('returnValue' in event) {
-                event.returnValue = false;
-            }
-        },
-        stopPropagation: function (event) {
-            if (event.stopPropagation) {
-                event.stopPropagation();
-            } else if ('cancelBubble' in event) {
-                event.cancelBubble = true;
-            }
-        },
-        /**
-         * keypress事件跨浏览器获取输入字符
-         * 某些浏览器在一些特殊键上也触发keypress，此时返回null
-         **/
-         getChar: function (event) {
-            if (event.which == null) {
-                return String.fromCharCode(event.keyCode);  // IE
-            }
-            else if (event.which != 0 && event.charCode != 0) {
-                return String.fromCharCode(event.which);    // the rest
-            }
-            else {
-                return null;    // special key
-            }
-         }
-    };
+  - 跨浏览器事件处理工具。只支持冒泡。不支持捕获
+  - @author (qiu_deqing@126.com)
+    \*/
+
+  var EventUtil = {
+  getEvent: function (event) {
+  return event || window.event;
+  },
+  getTarget: function (event) {
+  return event.target || event.srcElement;
+  },
+  // 返回注册成功的监听器，IE 中需要使用返回值来移除监听器
+  on: function (elem, type, handler) {
+  if (elem.addEventListener) {
+  elem.addEventListener(type, handler, false);
+  return handler;
+  } else if (elem.attachEvent) {
+  var wrapper = function () {
+  var event = window.event;
+  event.target = event.srcElement;
+  handler.call(elem, event);
+  };
+  elem.attachEvent('on' + type, wrapper);
+  return wrapper;
+  }
+  },
+  off: function (elem, type, handler) {
+  if (elem.removeEventListener) {
+  elem.removeEventListener(type, handler, false);
+  } else if (elem.detachEvent) {
+  elem.detachEvent('on' + type, handler);
+  }
+  },
+  preventDefault: function (event) {
+  if (event.preventDefault) {
+  event.preventDefault();
+  } else if ('returnValue' in event) {
+  event.returnValue = false;
+  }
+  },
+  stopPropagation: function (event) {
+  if (event.stopPropagation) {
+  event.stopPropagation();
+  } else if ('cancelBubble' in event) {
+  event.cancelBubble = true;
+  }
+  },
+  /**
+  _ keypress 事件跨浏览器获取输入字符
+  _ 某些浏览器在一些特殊键上也触发 keypress，此时返回 null
+  **/
+  getChar: function (event) {
+  if (event.which == null) {
+  return String.fromCharCode(event.keyCode); // IE
+  }
+  else if (event.which != 0 && event.charCode != 0) {
+  return String.fromCharCode(event.which); // the rest
+  }
+  else {
+  return null; // special key
+  }
+  }
+  };
 
 ### 评价一下三种方法实现继承的优缺点,并改进
 
@@ -1278,26 +1288,27 @@ HTML5 新增应用程序缓存，允许 web 应用将应用程序自身保存到
 
 改进：
 
-1. 所有三种方法应该在子类构造函数中调用父类构造函数实现实例属性初始化
+1.  所有三种方法应该在子类构造函数中调用父类构造函数实现实例属性初始化
 
     function Rect() {
-        Shape.call(this);
+    Shape.call(this);
     }
 
-1. 用新创建的对象替代子类默认原型，设置`Rect.prototype.constructor = Rect;`保证一致性
-2. 第三种方法的 polyfill：
+1.  用新创建的对象替代子类默认原型，设置`Rect.prototype.constructor = Rect;`保证一致性
+1.  第三种方法的 polyfill：
 
     function create(obj) {
-        if (Object.create) {
-            return Object.create(obj);
-        }
+    if (Object.create) {
+    return Object.create(obj);
+    }
 
         function f() {};
         f.prototype = obj;
         return new f();
+
     }
 
-## $javascript 编程部分
+## \$javascript 编程部分
 
 ### 请用原生 js 实现一个函数,给页面制定的任意一个元素添加一个透明遮罩(透明度可变,默认 0.2),使这个区域点击无效,要求兼容 IE8+及各主流浏览器,遮罩层效果如下图所示:
 

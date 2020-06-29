@@ -1,10 +1,10 @@
 ---
 tags:
-    - 计划
-id: ""
+  - 计划
 created: 2020-03-21T12:29:38.039Z
 modified: 2020-03-21T12:30:21.921Z
 ---
+
 # 2019 年末旅行计划:airplane:
 
 ## 大致路线安排
@@ -13,15 +13,15 @@ modified: 2020-03-21T12:30:21.921Z
 
 先看了下中国地图：
 
-![](https://gss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/f3d3572c11dfa9ec2d5a1f8064d0f703918fc135.jpg) 
+![](https://gss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/f3d3572c11dfa9ec2d5a1f8064d0f703918fc135.jpg)
 
 我目前的理想行进路线为：
 
-湖南省长沙市 $\rightarrow$ 重庆市 $\rightarrow$ 陕西省西安市 $\rightarrow$ 甘肃省兰州市（想要经过兰州 $\rightarrow$ 武威 $\rightarrow$ 张掖 $\rightarrow$ 酒泉 $\rightarrow$ 敦煌 $\rightarrow$ 玉门关 ）之后从敦煌飞回北京。  
+湖南省长沙市 $\rightarrow$ 重庆市 $\rightarrow$ 陕西省西安市 $\rightarrow$ 甘肃省兰州市（想要经过兰州 $\rightarrow$ 武威 $\rightarrow$ 张掖 $\rightarrow$ 酒泉 $\rightarrow$ 敦煌 $\rightarrow$ 玉门关 ）之后从敦煌飞回北京。
 
-本来还想去江西看一看滕王阁，但是看样子时间不太够，就下次吧。    
+本来还想去江西看一看滕王阁，但是看样子时间不太够，就下次吧。
 
-如果我 23 日出发前往长沙的话，距离 31 号在元旦前将会有 9 天时间。  
+如果我 23 日出发前往长沙的话，距离 31 号在元旦前将会有 9 天时间。
 
 ## 想要去的景点
 
@@ -41,11 +41,9 @@ modified: 2020-03-21T12:30:21.921Z
 2. 洞庭湖
 3. 君山岛
 
-
 **1.3 张家界**
 
 1. 天门山（:point_left: 我看了下这个有点远，这次就不去了）
-
 
 ### 2. 重庆
 
@@ -98,14 +96,11 @@ modified: 2020-03-21T12:30:21.921Z
 5. 雅丹魔鬼城
 6. 雅丹国家地质公园
 
-
 ### 5. 北京
 
 可能就坐飞机回北京了
 
-
-
-----
+---
 
 我思考了一下，张掖和敦煌等我以后拿到驾照了自驾游去吧，这次先不去了。
 

@@ -1,15 +1,15 @@
 ---
 tags:
-    - frontend/react
-id: ""
+  - frontend/react
 created: 2020-03-21T12:21:20.755Z
 modified: 2020-03-21T12:21:37.364Z
 ---
+
 # React Fragments
 
 Article: https://reactjs.org/docs/fragments.html
 
-总是看到 @imkcat 写 `React.Fragment`，一直没高清楚是什么意思，今天才明白过来，原来:  
+总是看到 @imkcat 写 `React.Fragment`，一直没高清楚是什么意思，今天才明白过来，原来:
 
     <table>
       <tr>
@@ -17,7 +17,7 @@ Article: https://reactjs.org/docs/fragments.html
       </tr>
     </table>
 
-如果 `<Columns />` 是 
+如果 `<Columns />` 是
 
     <React.Fragment>
       <td>Hello</td>
@@ -35,6 +35,6 @@ Article: https://reactjs.org/docs/fragments.html
 
 ---
 
-`<React.Fragment></React.Fragment>` 还可以被简写为 `<></>`  
+`<React.Fragment></React.Fragment>` 还可以被简写为 `<></>`
 
-佩服 @imkcat 马老哥 :face_with_thermometer:  
+佩服 @imkcat 马老哥 :face_with_thermometer:

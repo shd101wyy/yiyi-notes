@@ -1,11 +1,11 @@
 ---
 tags:
-    - backend
-    - backend/postgresql
-id: ""
+  - backend
+  - backend/postgresql
 created: 2020-03-21T11:12:16.805Z
 modified: 2020-03-21T11:38:45.153Z
 ---
+
 # PostgreSQL Data Migration on Ubuntu 18.04
 
 Article: [How To Move a PostgreSQL Data Directory to a New Location on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-move-a-postgresql-data-directory-to-a-new-location-on-ubuntu-16-04)
@@ -26,7 +26,7 @@ postgres=# SHOW data_directory;
 
 ```
 Output
-       data_directory       
+       data_directory
 ------------------------------
 /var/lib/postgresql/10/main
 (1 row)
@@ -74,7 +74,7 @@ $ sudo systemctl start postgresql
 $ sudo systemctl status postgresql
 ```
 
-Repeat step `1` to check if the data location has been changed to the new one.  
+Repeat step `1` to check if the data location has been changed to the new one.
 
 6. Remove the backup and restart postgresql
 

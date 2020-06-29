@@ -1,10 +1,10 @@
 ---
 tags:
-    - backend/ss
-id: ""
+  - backend/ss
 created: 2020-05-07T07:16:32.517Z
 modified: 2020-05-07T07:16:33.566Z
 ---
+
 # Install V2Ray + WebSocket + TLS + Caddy + CDN Using 233boy Script
 
 [Source](https://armazopu.github.io/v2ray+websocket+tls+caddy+cdn.html "Permalink to Install V2Ray + WebSocket + TLS + Caddy + CDN Using 233boy Script")
@@ -17,12 +17,12 @@ V2Ray is the most popular proxy software after Shadowsocks and ShadowsocksR, but
 
 Before you download and run the script, you will need to:
 
-* Open an account with a VPS provider. We will use the example of Digital Ocean, but you can choose another VPS provider if you prefer, e.g. Bandwagon Host.
-* Have an account with Freenom. Do not worry if you do not have one. The Freenom site will step you through creating an account when you register your first domain name.
-* Open an account with Cloudflare.
-* Install a terminal emulator on your PC. We will use XSHELL 6 from NetSarang. They offer a free license for home and school users. You could alternatively use PuTTY.
-* Assuming you have a Windows PC, download and unzip the v2rayN-Core.zip V2RayN GUI client for Windows from Github.
-* Download and install Firefox browser, which we will use for connecting through V2RayN to the VPS.
+- Open an account with a VPS provider. We will use the example of Digital Ocean, but you can choose another VPS provider if you prefer, e.g. Bandwagon Host.
+- Have an account with Freenom. Do not worry if you do not have one. The Freenom site will step you through creating an account when you register your first domain name.
+- Open an account with Cloudflare.
+- Install a terminal emulator on your PC. We will use XSHELL 6 from NetSarang. They offer a free license for home and school users. You could alternatively use PuTTY.
+- Assuming you have a Windows PC, download and unzip the v2rayN-Core.zip V2RayN GUI client for Windows from Github.
+- Download and install Firefox browser, which we will use for connecting through V2RayN to the VPS.
 
 ## Create VPS
 
@@ -131,7 +131,7 @@ Select **4** for WebSocket + TLS, and press **Enter**.
 In the lines above, you are being asked for a port number. Press **Enter** to accept the generated value, which in our example is `62864`.
 
     请输入一个 正确的域名，一定一定一定要正确，不！能！出！错！
-    (例如：233blog.com): 
+    (例如：233blog.com):
 
 In the lines above, you are asked for a host name, such as `233blog.com`. Our host name is `rayscript.ml`. After your have typed your host name, press **Enter**.
 
@@ -163,7 +163,7 @@ In the lines above, you are asked if you want website camouflage. Put the defaul
 In the lines above, you are asked if you want ad blocking (which will affect performance). Put the default **n** for no.
 
     是否配置 Shadowsocks [Y/N]
-    (默认 [N]): 
+    (默认 [N]):
 
 In the lines above, you are asked whether you want to configure Shadowsocks. Put the default **n** for no.
 
@@ -206,7 +206,7 @@ to generate a Vmess URL link. For example:
 
 You can also enter:
 
-    v2ray qr 
+    v2ray qr
 
 to generate a link to a page with a QR code. For example:
 
@@ -232,8 +232,8 @@ Go to the **Crypto** tab. Set SSL to **Off**. Then set SSL back to **Full**. Mak
 
 We will use V2RayN on Windows as our client. After you launch V2RayN, the icon to open the V2RayN control panel is in the system tray, which is at the bottom right of your Windows desktop. From the Server (服务器) menu, select either:
 
-* Import URL from clipboard (从剪贴板导入批量URL)
-* Scan the QR code on the screen (扫描屏幕上的二维码)
+- Import URL from clipboard (从剪贴板导入批量 URL)
+- Scan the QR code on the screen (扫描屏幕上的二维码)
 
 These correspond to the server commands `v2ray url` and `v2ray qr`. Whichever method you choose, your server parameters are imported.
 

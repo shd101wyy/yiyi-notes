@@ -1,54 +1,52 @@
 ---
 tags:
-    - 小工具
-id: ""
+  - 小工具
 created: 2020-05-22T14:10:37.568Z
 modified: 2020-06-01T14:30:08.361Z
 ---
+
 # Tmux Cheat Sheet & Quick Reference
 
 [Source](https://tmuxcheatsheet.com/ "Permalink to Tmux Cheat Sheet & Quick Reference")
-![](https://i.loli.net/2020/06/01/9oDuXtIcNkVMvWJ.png)  
-
-
+![](https://i.loli.net/2020/06/01/9oDuXtIcNkVMvWJ.png)
 
 ## Sessions
 
-$ tmux
+\$ tmux
 
-$ tmux new
+\$ tmux new
 
-$ tmux new-session
+\$ tmux new-session
 
 : new
 
 Start a new session
 
-$ tmux new -s mysession
+\$ tmux new -s mysession
 
 : new -s mysession
 
-Start a new session with the name *mysession*
+Start a new session with the name _mysession_
 
-$ tmux kill-ses -t mysession
+\$ tmux kill-ses -t mysession
 
-$ tmux kill-session -t mysession
+\$ tmux kill-session -t mysession
 
-kill/delete session *mysession*
+kill/delete session _mysession_
 
-$ tmux kill-session -a
+\$ tmux kill-session -a
 
 kill/delete all sessions but the current
 
-$ tmux kill-session -a -t mysession
+\$ tmux kill-session -a -t mysession
 
-kill/delete all sessions but *mysession*
+kill/delete all sessions but _mysession_
 
-Ctrl + b  $
+Ctrl + b \$
 
 Rename session
 
-Ctrl + b  d
+Ctrl + b d
 
 Detach from session
 
@@ -56,69 +54,69 @@ Detach from session
 
 Detach others on the session (Maximize window by detach other clients)
 
-$ tmux ls
+\$ tmux ls
 
-$ tmux list-sessions
+\$ tmux list-sessions
 
-Ctrl + b  s
+Ctrl + b s
 
 Show all sessions
 
-$ tmux a
+\$ tmux a
 
-$ tmux at
+\$ tmux at
 
-$ tmux attach
+\$ tmux attach
 
-$ tmux attach-session
+\$ tmux attach-session
 
 Attach to last session
 
-$ tmux a -t mysession
+\$ tmux a -t mysession
 
-$ tmux at -t mysession
+\$ tmux at -t mysession
 
-$ tmux attach -t mysession
+\$ tmux attach -t mysession
 
-$ tmux attach-session -t mysession
+\$ tmux attach-session -t mysession
 
-Attach to a session with the name *mysession*
+Attach to a session with the name _mysession_
 
-Ctrl + b  (
+Ctrl + b (
 
 Move to previous session
 
-Ctrl + b  )
+Ctrl + b )
 
 Move to next session
 
 ## Windows
 
-$ tmux new -s mysession -n mywindow
+\$ tmux new -s mysession -n mywindow
 
-start a new session with the name *mysession* and window *mywindow*
+start a new session with the name _mysession_ and window _mywindow_
 
-Ctrl + b  c
+Ctrl + b c
 
 Create window
 
-Ctrl + b  ,
+Ctrl + b ,
 
 Rename current window
 
-Ctrl + b  &
+Ctrl + b &
 
 Close current window
 
-Ctrl + b  p
+Ctrl + b p
 
 Previous window
 
-Ctrl + b  n
+Ctrl + b n
 
 Next window
 
-Ctrl + b  0 ... 9
+Ctrl + b 0 ... 9
 
 Switch/select window by number
 
@@ -132,33 +130,33 @@ Move current window to the left by one position
 
 ## Panes
 
-Ctrl + b  ;
+Ctrl + b ;
 
 Toggle last active pane
 
-Ctrl + b  %
+Ctrl + b %
 
 Split pane vertically
 
-Ctrl + b  "
+Ctrl + b "
 
 Split pane horizontally
 
-Ctrl + b  {
+Ctrl + b {
 
 Move the current pane left
 
-Ctrl + b  }
+Ctrl + b }
 
 Move the current pane right
 
-Ctrl + b  
+Ctrl + b
 
-Ctrl + b  
+Ctrl + b
 
-Ctrl + b  
+Ctrl + b
 
-Ctrl + b  
+Ctrl + b
 
 Switch to pane to the direction
 
@@ -166,15 +164,15 @@ Switch to pane to the direction
 
 Toggle synchronize-panes(send command to all panes)
 
-Ctrl + b  Spacebar
+Ctrl + b Spacebar
 
 Toggle between pane layouts
 
-Ctrl + b  o
+Ctrl + b o
 
 Switch to next pane
 
-Ctrl + b  q
+Ctrl + b q
 
 Show pane numbers
 
@@ -182,35 +180,35 @@ Ctrl + b q 0 ... 9
 
 Switch/select pane by number
 
-Ctrl + b  z
+Ctrl + b z
 
 Toggle pane zoom
 
-Ctrl + b  !
+Ctrl + b !
 
 Convert pane into a window
 
-Ctrl + b  + 
+Ctrl + b +
 
-Ctrl + b  Ctrl + 
+Ctrl + b Ctrl +
 
-Ctrl + b  + 
+Ctrl + b +
 
-Ctrl + b  Ctrl + 
+Ctrl + b Ctrl +
 
 Resize current pane height(holding second key is optional)
 
-Ctrl + b  + 
+Ctrl + b +
 
-Ctrl + b  Ctrl + 
+Ctrl + b Ctrl +
 
-Ctrl + b  + 
+Ctrl + b +
 
-Ctrl + b  Ctrl + 
+Ctrl + b Ctrl +
 
 Resize current pane width(holding second key is optional)
 
-Ctrl + b  x
+Ctrl + b x
 
 Close current pane
 
@@ -220,11 +218,11 @@ Close current pane
 
 use vi keys in buffer
 
-Ctrl + b  [
+Ctrl + b [
 
 Enter copy mode
 
-Ctrl + b  PgUp
+Ctrl + b PgUp
 
 Enter copy mode and scroll one page up
 
@@ -296,13 +294,13 @@ Enter
 
 Copy selection
 
-Ctrl + b  ]
+Ctrl + b ]
 
-Paste contents of buffer\_0
+Paste contents of buffer_0
 
 : show-buffer
 
-display buffer\_0 contents
+display buffer_0 contents
 
 : capture-pane
 
@@ -318,15 +316,15 @@ Show all buffers and paste selected
 
 : save-buffer buf.txt
 
-Save buffer contents to *buf.txt*
+Save buffer contents to _buf.txt_
 
 : delete-buffer -b 1
 
-delete buffer\_1
+delete buffer_1
 
 ## Misc
 
-Ctrl + b  :
+Ctrl + b :
 
 Enter command mode
 
@@ -340,10 +338,10 @@ Set OPTION for all windows
 
 ## Help
 
-$ tmux info
+\$ tmux info
 
 Show every session, window, pane, etc...
 
-Ctrl + b  ?
+Ctrl + b ?
 
 Show shortcuts

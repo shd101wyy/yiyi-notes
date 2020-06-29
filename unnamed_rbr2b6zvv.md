@@ -1,11 +1,12 @@
 ---
 tags:
-    - backend/npm/patch
-id: ""
+  - backend/npm/patch
 created: 2020-04-29T08:01:13.541Z
 modified: 2020-04-30T13:39:03.754Z
 ---
+
 # patch-package
+
 #backend/npm #backend/npm/patch
 
 Very nice library to apply patches
@@ -16,13 +17,13 @@ Very nice library to apply patches
 
 `patch-package` lets app authors instantly make and keep fixes to npm dependencies. It's a vital band-aid for those of us living on the bleeding edge.
 
-    # fix a bug in one of your dependencies 
+    # fix a bug in one of your dependencies
     vim node_modules/some-package/brokenFile.js
 
-    # run patch-package to create a .patch file 
+    # run patch-package to create a .patch file
     npx patch-package some-package
 
-    # commit the patch file to share the fix with your team 
+    # commit the patch file to share the fix with your team
     git add patches/some-package+3.14.15.patch
     git commit -m "fix brokenFile.js in some-package"
 
@@ -64,9 +65,9 @@ For `patch-package` to work on Heroku applications, you must specify [`NPM_CONFI
 
 ### Docker and CI
 
-* If having errors about working directory ("cannot run in wd [...]") when building in Docker, you might need to adjust configuration in `.npmrc`. See [\#185](https://github.com/ds300/patch-package/issues/185).
-* In your `Dockerfile`, remember to copy over the patch files *before* running `[npm|yarn] install`
-* If you cache `node_modules` rather than running `yarn install` every time, make sure that the `patches` dir is included in your cache key somehow. Otherwise if you update a patch then the change may not be reflected on subsequent CI runs.
+- If having errors about working directory ("cannot run in wd [...]") when building in Docker, you might need to adjust configuration in `.npmrc`. See [\#185](https://github.com/ds300/patch-package/issues/185).
+- In your `Dockerfile`, remember to copy over the patch files _before_ running `[npm|yarn] install`
+- If you cache `node_modules` rather than running `yarn install` every time, make sure that the `patches` dir is included in your cache key somehow. Otherwise if you update a patch then the change may not be reflected on subsequent CI runs.
 
   E.g., for CircleCI: before loading/saving your cache run `cat patches/* | md5 > patches.hash` and then update your hash key to include a checksum of that file, `{{ checksum "yarn.lock" }}-{{ checksum "patches.hash" }}`.
 
@@ -74,7 +75,7 @@ For `patch-package` to work on Heroku applications, you must specify [`NPM_CONFI
 
 ### Making patches
 
-First make changes to the files of a particular package in your node\_modules folder, then run
+First make changes to the files of a particular package in your node_modules folder, then run
 
     yarn patch-package package-name
 
@@ -88,23 +89,27 @@ If this is the first time you've used `patch-package`, it will create a folder c
 
 #### Options
 
-* `--use-yarn`
+- `--use-yarn`
 
   By default, patch-package checks whether you use npm or yarn based on which lockfile you have. If you have both, it uses npm by default. Set this option to override that default and always use yarn.
-* `--exclude <regexp>`
+
+- `--exclude <regexp>`
 
   Ignore paths matching the regexp when creating patch files. Paths are relative to the root dir of the package to be patched.
 
   Default value: `package\\.json$`
-* `--include <regexp>`
+
+- `--include <regexp>`
 
   Only consider paths matching the regexp when creating patch files. Paths are relative to the root dir of the package to be patched.
 
   Default value: `.*`
-* `--case-sensitive-path-filtering`
+
+- `--case-sensitive-path-filtering`
 
   Make regexps used in --include or --exclude filters case-sensitive.
-* `--patch-dir`
+
+- `--patch-dir`
 
   Specify the name for the directory in which to put the patch files.
 
@@ -128,14 +133,15 @@ Run `patch-package` without arguments to apply all patches in your project.
 
 #### Options
 
-* `--reverse`
+- `--reverse`
 
   Un-applies all patches.
 
   Note that this will fail if the patched files have changed since being patched. In that case, you'll probably need to re-install `node_modules`.
 
   This option was added to help people using CircleCI avoid [an issue around caching and patch file updates](https://github.com/ds300/patch-package/issues/37) but might be useful in other contexts too.
-* `--patch-dir`
+
+- `--patch-dir`
 
   Specify the name for the directory in which the patch files are located
 
@@ -163,29 +169,29 @@ This will allow those patch files to be safely ignored when `NODE_ENV=production
 
 ## Benefits of patching over forking
 
-* Sometimes forks need extra build steps, e.g. with react-native for Android. Forget that noise.
-* Get told in big red letters when the dependency changed and you need to check that your fix is still valid.
-* Keep your patches colocated with the code that depends on them.
-* Patches can be reviewed as part of your normal review process, forks probably can't
+- Sometimes forks need extra build steps, e.g. with react-native for Android. Forget that noise.
+- Get told in big red letters when the dependency changed and you need to check that your fix is still valid.
+- Keep your patches colocated with the code that depends on them.
+- Patches can be reviewed as part of your normal review process, forks probably can't
 
 ## When to fork instead
 
-* The change is too consequential to be developed in situ.
-* The change would be useful to other people as-is.
-* You can afford to make a proper PR to upstream.
+- The change is too consequential to be developed in situ.
+- The change would be useful to other people as-is.
+- You can afford to make a proper PR to upstream.
 
 ## Isn't this dangerous?
 
 Nope. The technique is quite robust. Here are some things to keep in mind though:
 
-* It's easy to forget to run `yarn` or `npm` when switching between branches that do and don't have patch files.
-* Long lived patches can be costly to maintain if they affect an area of code that is updated regularly and you want to update the package regularly too.
-* Big semantic changes can be hard to review. Keep them small and obvious or add plenty of comments.
-* Changes can also impact the behaviour of other untouched packages. It's normally obvious when this will happen, and often desired, but be careful nonetheless.
+- It's easy to forget to run `yarn` or `npm` when switching between branches that do and don't have patch files.
+- Long lived patches can be costly to maintain if they affect an area of code that is updated regularly and you want to update the package regularly too.
+- Big semantic changes can be hard to review. Keep them small and obvious or add plenty of comments.
+- Changes can also impact the behaviour of other untouched packages. It's normally obvious when this will happen, and often desired, but be careful nonetheless.
 
 ## Why use postinstall-postinstall with Yarn?
 
-Most times when you do a `yarn`, `yarn add`, `yarn remove`, or `yarn install` (which is the same as just `yarn`) Yarn will completely replace the contents of your node\_modules with freshly unpackaged modules. patch-package uses the `postinstall` hook to modify these fresh modules, so that they behave well according to your will.
+Most times when you do a `yarn`, `yarn add`, `yarn remove`, or `yarn install` (which is the same as just `yarn`) Yarn will completely replace the contents of your node_modules with freshly unpackaged modules. patch-package uses the `postinstall` hook to modify these fresh modules, so that they behave well according to your will.
 
 Yarn only runs the `postinstall` hook after `yarn` and `yarn add`, but not after `yarn remove`. The `postinstall-postinstall` package is used to make sure your `postinstall` hook gets executed even after a `yarn remove`.
 

@@ -1,13 +1,15 @@
 ---
 tags:
-    - algorithm/crdt
-    - crossnote
-id: ""
+  - algorithm/crdt
+  - crossnote
 created: 2020-04-30T12:59:54.155Z
 modified: 2020-04-30T13:42:29.773Z
 ---
+
 # Conclave
-<!-- @crossnote.comment "id":"c9cf43e9-7d3e-489e-9f0e-f870fa664c35" -->  
+
+<!-- @crossnote.comment "id":"c9cf43e9-7d3e-489e-9f0e-f870fa664c35" -->
+
 [Source](https://conclave-team.github.io/conclave-site/#how-will-users-send-messages-directly-to-each-other "Permalink to Conclave")
 
 A private and secure real-time collaborative text editor
@@ -16,40 +18,40 @@ A private and secure real-time collaborative text editor
 
 [Click to start using Conclave now!](https://www.conclave.tech/)
 
-*Please note that Conclave works best in Google Chrome*
+_Please note that Conclave works best in Google Chrome_
 
 ![Conclave In Action](https://conclave-team.github.io/conclave-site/img/conclave_in_action3.gif)
 
-##  Table of Contents 
+## Table of Contents
 
 1. [What is a text editor?](https://conclave-team.github.io/conclave-site/#what-is-a-text-editor)
 2. [What is a real-time collaborative text editor?](https://conclave-team.github.io/conclave-site/#what-is-a-real-time-collaborative-text-editor)
 3. [Operational Transformation (OT)](https://conclave-team.github.io/conclave-site/#operational-transformation-ot)
-4. [Conflict-Free Replicated Data Type (CRDT)](https://conclave-team.github.io/conclave-site/#conflict-free-replicated-data-type-crdt) 
-  1. [Globally Unique Characters](https://conclave-team.github.io/conclave-site/#globally-unique-characters)
-  2. [Globally Ordered Characters](https://conclave-team.github.io/conclave-site/#globally-ordered-characters)
-5. [Coding the CRDT](https://conclave-team.github.io/conclave-site/#coding-the-crdt) 
-  1. [Web Text Editor](https://conclave-team.github.io/conclave-site/#web-text-editor)
-  2. [CRDT Structure](https://conclave-team.github.io/conclave-site/#crdt-structure)
-  3. [Local Insert/Delete](https://conclave-team.github.io/conclave-site/#local-insertdelete)
-  4. [Remote Insert/Delete](https://conclave-team.github.io/conclave-site/#remote-insertdelete)
-6. [Limitations of a Central Relay Server](https://conclave-team.github.io/conclave-site/#limitations-of-a-central-relay-server)
-7. [Peer-to-Peer Architecture](https://conclave-team.github.io/conclave-site/#peer-to-peer-architecture)
-8. [How will users send messages directly to each other?](https://conclave-team.github.io/conclave-site/#how-will-users-send-messages-directly-to-each-other)
-9. [Is WebRTC Secure?](https://conclave-team.github.io/conclave-site/#is-webrtc-secure)
-10. [Version Vector](https://conclave-team.github.io/conclave-site/#version-vector)
-11. [Optimizations](https://conclave-team.github.io/conclave-site/#optimizations) 
-  1. [CRDT Structure](https://conclave-team.github.io/conclave-site/#crdt-structure-1)
-  2. [Peer-To-Peer Connection Management](https://conclave-team.github.io/conclave-site/#peer-to-peer-connection-management) 
+4. [Conflict-Free Replicated Data Type (CRDT)](https://conclave-team.github.io/conclave-site/#conflict-free-replicated-data-type-crdt)
+5. [Globally Unique Characters](https://conclave-team.github.io/conclave-site/#globally-unique-characters)
+6. [Globally Ordered Characters](https://conclave-team.github.io/conclave-site/#globally-ordered-characters)
+7. [Coding the CRDT](https://conclave-team.github.io/conclave-site/#coding-the-crdt)
+8. [Web Text Editor](https://conclave-team.github.io/conclave-site/#web-text-editor)
+9. [CRDT Structure](https://conclave-team.github.io/conclave-site/#crdt-structure)
+10. [Local Insert/Delete](https://conclave-team.github.io/conclave-site/#local-insertdelete)
+11. [Remote Insert/Delete](https://conclave-team.github.io/conclave-site/#remote-insertdelete)
+12. [Limitations of a Central Relay Server](https://conclave-team.github.io/conclave-site/#limitations-of-a-central-relay-server)
+13. [Peer-to-Peer Architecture](https://conclave-team.github.io/conclave-site/#peer-to-peer-architecture)
+14. [How will users send messages directly to each other?](https://conclave-team.github.io/conclave-site/#how-will-users-send-messages-directly-to-each-other)
+15. [Is WebRTC Secure?](https://conclave-team.github.io/conclave-site/#is-webrtc-secure)
+16. [Version Vector](https://conclave-team.github.io/conclave-site/#version-vector)
+17. [Optimizations](https://conclave-team.github.io/conclave-site/#optimizations)
+18. [CRDT Structure](https://conclave-team.github.io/conclave-site/#crdt-structure-1)
+19. [Peer-To-Peer Connection Management](https://conclave-team.github.io/conclave-site/#peer-to-peer-connection-management)
     1. [Network List and Peer Discovery](https://conclave-team.github.io/conclave-site/#network-list-and-peer-discovery)
     2. [Automatic Network Balancing](https://conclave-team.github.io/conclave-site/#automatic-network-balancing)
-  3. [Editor Features](https://conclave-team.github.io/conclave-site/#editor-features) 
+20. [Editor Features](https://conclave-team.github.io/conclave-site/#editor-features)
     1. [Remote Cursors](https://conclave-team.github.io/conclave-site/#remote-cursors)
     2. [Video Chat](https://conclave-team.github.io/conclave-site/#video-chat)
     3. [Download](https://conclave-team.github.io/conclave-site/#download)
     4. [Upload](https://conclave-team.github.io/conclave-site/#upload)
-12. [Future Plans](https://conclave-team.github.io/conclave-site/#future-plans)
-13. [Our Team](https://conclave-team.github.io/conclave-site/#our-team)
+21. [Future Plans](https://conclave-team.github.io/conclave-site/#future-plans)
+22. [Our Team](https://conclave-team.github.io/conclave-site/#our-team)
 
 ## What is a text editor?
 
@@ -97,8 +99,8 @@ With our text editor use case, if both users try to insert the same letter in th
 
 Through these examples, we’ve seen that a collaborative text editor is different than a simple text editor. Further, we’ve concluded that when users make concurrent edits to a shared document, the insert and delete operations must commute and the delete operations must be idempotent.
 
-* **Commutativity**: Concurrent insert and delete operations converge to the same result regardless of the order in which they are applied.
-* **Idempotency**: Repeated delete operations produce the same result.
+- **Commutativity**: Concurrent insert and delete operations converge to the same result regardless of the order in which they are applied.
+- **Idempotency**: Repeated delete operations produce the same result.
 
 How can we solve this challenge and build our real-time collaborative text editor?
 
@@ -207,10 +209,10 @@ For our CRDT data structure, we simply need a globally unique **Site ID** and a 
 
 Beyond that, our CRDT must handle 4 basic operations:
 
-* **Local Insert**: User inserts character into their local text editor and sends the operation to all other users.
-* **Local Delete**: User deletes character from their local editor and sends the operation to all other users.
-* **Remote Insert**: User receives a insert operation from another user and inserts it to their local editor.
-* **Remote Delete**: User receives a delete operation from another user and deletes it from their local editor.
+- **Local Insert**: User inserts character into their local text editor and sends the operation to all other users.
+- **Local Delete**: User deletes character from their local editor and sends the operation to all other users.
+- **Remote Insert**: User receives a insert operation from another user and inserts it to their local editor.
+- **Remote Delete**: User receives a delete operation from another user and deletes it from their local editor.
 
 ### Local Insert/Delete
 
@@ -348,7 +350,7 @@ Since most internet users use wireless routers, the public IP address is found u
 
 ## Is WebRTC Secure?
 
-One question we are often asked is *Is WebRTC secure and encrypted?* The answer is a resounding **YES**.
+One question we are often asked is _Is WebRTC secure and encrypted?_ The answer is a resounding **YES**.
 
 ![WebRTC stack](https://conclave-team.github.io/conclave-site/blogImgs/webrtc_stack.png)
 
@@ -427,9 +429,9 @@ So at this point, we now have a peer-to-peer, real-time, collaborative text edit
 
 As our team began to use Conclave, we noticed aspects of the user experience that could be improved. We broke these areas for improvement into three categories:
 
-* CRDT Structure
-* Peer-To-Peer Connection Management
-* Editor Features
+- CRDT Structure
+- Peer-To-Peer Connection Management
+- Editor Features
 
 ### CRDT Structure
 
@@ -439,15 +441,15 @@ Another issue we ran into is the slow communication between our CodeMirror edito
 
 To use this position object in our linear array CRDT, it needed to be converted into a linear index. This involved retrieving the entire document, splitting it by newline characters, iterating over the lines, and calculating the overall index. The inverse of this process was performed in the case of remote insertions and deletions.
 
-![editor\_position](https://conclave-team.github.io/conclave-site/blogImgs/editor_position.png)
+![editor_position](https://conclave-team.github.io/conclave-site/blogImgs/editor_position.png)
 
 That is a lot of overhead to find a simple index. This led us to wonder how we could structure our CRDT to be more efficient. That’s when we realized the CodeMirror editor itself is structured as a two-dimensional array.
 
-![two\_dimen\_array](https://conclave-team.github.io/conclave-site/blogImgs/two_dimen_array.png)
+![two_dimen_array](https://conclave-team.github.io/conclave-site/blogImgs/two_dimen_array.png)
 
 If we could structure our CRDT to match the structure of our text editor, we would eliminate that overhead. It turns out it has a lot of other benefits as well.
 
-![crdt\_table](https://conclave-team.github.io/conclave-site/blogImgs/crdt_table.png)
+![crdt_table](https://conclave-team.github.io/conclave-site/blogImgs/crdt_table.png)
 
 Search went from **O(log N)** — N being the number of characters in the document — to **O(log L + log C)** — L being the number of lines and C being the number of characters in that line.
 
@@ -467,15 +469,15 @@ Where it took our original CRDT upwards of 14 seconds to complete about 100 thou
 
 Our major optimizations had to do with how we managed WebRTC connections between users. While WebRTC allows users to connect directly to each other, it’s up to the developer to manage those connections and distribute them through the network.
 
-**Note:** We define *“network”* as all the users collaborating on a document, essentially the web of peer-to-peer connections for a particular document. Remember that in this context, the *“network”* is only made up of the users – there are no servers.
+**Note:** We define _“network”_ as all the users collaborating on a document, essentially the web of peer-to-peer connections for a particular document. Remember that in this context, the _“network”_ is only made up of the users – there are no servers.
 
 An initial problem we ran into was users getting stranded or cut off from the network. Say we have three users, like in the diagram below.
 
-![network\_3](https://conclave-team.github.io/conclave-site/blogImgs/network_3.png)
+![network_3](https://conclave-team.github.io/conclave-site/blogImgs/network_3.png)
 
 Peer 2 and Peer 3 are connected through Peer 1, who acts as the message relay. But what if Peer 1 leaves?
 
-![network\_cut](https://conclave-team.github.io/conclave-site/blogImgs/network_cut.png)
+![network_cut](https://conclave-team.github.io/conclave-site/blogImgs/network_cut.png)
 
 Peer 2 and Peer 3 are now stranded and they can no longer collaborate. To resolve this, we need a way for users to discover each other.
 
@@ -483,11 +485,11 @@ Peer 2 and Peer 3 are now stranded and they can no longer collaborate. To resolv
 
 Our solution was to have each peer maintain a list of all the other users in the network. This network list of peers gets updated whenever a user joins and leave the network.
 
-![network\_list](https://conclave-team.github.io/conclave-site/blogImgs/network_list.png)
+![network_list](https://conclave-team.github.io/conclave-site/blogImgs/network_list.png)
 
 This means that each user is aware of every other user in the network, even if they’re not directly connected to them. So now if a user they are connected to leaves the network, they can pick someone from their network list and connect to them, allowing collaboration to continue.
 
-![peer\_found](https://conclave-team.github.io/conclave-site/blogImgs/peer_found.png)
+![peer_found](https://conclave-team.github.io/conclave-site/blogImgs/peer_found.png)
 
 This is somewhat of a reactive solultion but could we be more proactive? Is it possible to avoid a single point of failure in the first place? After all, that was part of the purpose of creating a peer-to-peer network.
 
@@ -497,7 +499,7 @@ In [Peer-to-Peer Architecture](https://conclave-team.github.io/conclave-site/#pe
 
 Our solution was to add an evaluation step before connecting a new user to the network. When a new user attempts to join the document (or network), they send a connection request first.
 
-![conn\_request](https://conclave-team.github.io/conclave-site/blogImgs/conn_request.png)
+![conn_request](https://conclave-team.github.io/conclave-site/blogImgs/conn_request.png)
 
 Whoever receives the request will evaluate it to see if they have reached their maximum number of connections. If the answer is yes, they will forward the request to another user in the network. If they haven’t, they will accept the connection and connect back.
 
@@ -538,7 +540,7 @@ Having several people edit a document at the same time can be a chaotic experien
 
 That is the situation we ran into. Without a way to identify another person on the page, users would end up writing over each other and turning the real-time collaboration experience into a headache. We solved this problem with remote cursors.
 
-![remote\_cursors](https://conclave-team.github.io/conclave-site/blogImgs/remote_cursors.png)
+![remote_cursors](https://conclave-team.github.io/conclave-site/blogImgs/remote_cursors.png)
 
 Each user is represented by a cursor with a unique color/animal combination that identifies the user and their cursor’s location in the document.
 
@@ -574,7 +576,7 @@ With 221 possible animals and 210 possible colors, it’s unlikely users will ev
 
 Since we’re already using WebRTC to send text messages between users, we realized it’d be relatively simple to add video chat as well.
 
-![video\_chat](https://conclave-team.github.io/conclave-site/blogImgs/video.png)
+![video_chat](https://conclave-team.github.io/conclave-site/blogImgs/video.png)
 
 To place a call, users click on any animal in their list of peers. The receiving user is alerted and can answer the call by clicking your animal in their list of peers. A video modal pops up on both screens and can be dragged around the screen to a more convenient location. Clicking the **x** ends the call and all WebRTC media channels are closed. At the moment, a user can only be on a video call with one other user at a time.
 
@@ -657,6 +659,6 @@ Finally, you may have heard of the recent release of [GitHub’s Teletype](https
 
 We hope you enjoyed reading about our journey as much as we enjoyed the journey itself! We are all available for new opportunities, so please feel free to reach out!
 
-* [![Nitin Savant](https://conclave-team.github.io/conclave-site/img/nitin.png)**Nitin Savant** Software Engineer (MPLS)](http://www.nitinsavant.com/)
-* [![Elise Olivares](https://conclave-team.github.io/conclave-site/img/el_resized.jpg)**Elise Olivares** Software Engineer (SF)](https://elisejane.github.io/)
-* [![Sun-Li Beatteay](https://conclave-team.github.io/conclave-site/img/sunny.jpg)**Sun-Li Beatteay** Software Engineer (NYC)](http://sunli.co/)
+- [![Nitin Savant](https://conclave-team.github.io/conclave-site/img/nitin.png)**Nitin Savant** Software Engineer (MPLS)](http://www.nitinsavant.com/)
+- [![Elise Olivares](https://conclave-team.github.io/conclave-site/img/el_resized.jpg)**Elise Olivares** Software Engineer (SF)](https://elisejane.github.io/)
+- [![Sun-Li Beatteay](https://conclave-team.github.io/conclave-site/img/sunny.jpg)**Sun-Li Beatteay** Software Engineer (NYC)](http://sunli.co/)

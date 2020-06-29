@@ -1,10 +1,10 @@
 ---
 tags:
-    - crossnote/codemirror
-id: ""
+  - crossnote/codemirror
 created: 2020-05-10T12:43:55.539Z
 modified: 2020-05-10T12:44:33.794Z
 ---
+
 # Hint-function: Filtered hints containing HTML are escaped
 
 [Source](https://discuss.codemirror.net/t/hint-function-filtered-hints-containing-html-are-escaped/849/3 "Permalink to Hint-function: Filtered hints containing HTML are escaped")
@@ -31,7 +31,7 @@ Is there a way to treat the result (the `list:`-array in the code above) as HTML
 
 ---
 
-No, hint text is *text*, not HTML. You can provide a custom `render` method for your hints to adjust the way they appear.
+No, hint text is _text_, not HTML. You can provide a custom `render` method for your hints to adjust the way they appear.
 
 ---
 

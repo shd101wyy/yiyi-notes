@@ -1,18 +1,19 @@
 ---
 tags:
-    - frontend/react/create-react-app
-id: ""
+  - frontend/react/create-react-app
 created: 2020-05-01T12:36:59.886Z
 modified: 2020-05-01T12:41:12.334Z
 ---
+
 # Create a PWA Update Notification with Create React App
-#frontend/react/create-react-app 
+
+#frontend/react/create-react-app
 
 [Source](https://felixgerschau.com/create-a-pwa-update-notification-with-create-react-app "Permalink to Create a PWA Update Notification with Create React App")
 
 [![Update notification screenshot](https://felixgerschau.com/static/4ccaf02d115d2288a862d1b1650242ba/5a190/update-notification-screenshot.png)](https://felixgerschau.com/static/4ccaf02d115d2288a862d1b1650242ba/3fca6/update-notification-screenshot.png)
 
-*If you're only interested in code just skip to "Implementation" further down.*
+_If you're only interested in code just skip to "Implementation" further down._
 
 When I first heard about progressive web apps (or PWAs) and their offline capabilities, the first question that came to my mind was how to gain control over which version the user is seeing.
 
@@ -22,7 +23,7 @@ Here I'll first go over some basic concepts regarding progressive web apps and t
 
 In single-page applications without server-side rendering, usually, the first thing being loaded is the application code, which then populates the app with data fetched from the API. This is also called [app shell architecture](https://developers.google.com/web/fundamentals/architecture/app-shell).
 
-In other words, the "app shell" is everything that you would normally download from a mobile app store. In progressive web apps, we *cache* the app shell with service workers.
+In other words, the "app shell" is everything that you would normally download from a mobile app store. In progressive web apps, we _cache_ the app shell with service workers.
 
 Different [caching strategies](https://developers.google.com/web/tools/workbox/modules/workbox-strategies) can be selected when working with progressive web apps and service workers. The most widely used strategy is the [cache first](https://developers.google.com/web/tools/workbox/modules/workbox-strategies#cache_first_cache_falling_back_to_network) strategy, which first serves the application from the service worker cache and then updates the cache in the background to ensure fast and consistent user experience.
 
@@ -40,21 +41,21 @@ Now we can get the service worker to become active in a few different ways:
 
 **1\. Close all tabs and open the website again**
 
-The service worker won't automatically pass on to *available* unless **all** tabs with the website open have been closed.
+The service worker won't automatically pass on to _available_ unless **all** tabs with the website open have been closed.
 
-**2\. Call *skipWaiting* in the service-worker.js**
+**2\. Call _skipWaiting_ in the service-worker.js**
 
 This simply tells the service worker to install and activate new versions as soon as they are available.
 
-**3\. Call *skipWaiting* on user interaction**
+**3\. Call _skipWaiting_ on user interaction**
 
 That's when the user clicks on the button of the banner we'll provide.
 
 ## How service workers are set up in Create-React-App
 
-In *Create React App* you might have noticed that it already comes with a `serviceWorker.ts` file (I'm using the TypeScript version here).
+In _Create React App_ you might have noticed that it already comes with a `serviceWorker.ts` file (I'm using the TypeScript version here).
 
-Behind the scenes, CRA is using [Workbox](https://developers.google.com/web/tools/workbox/), a tool by Google that handles all the set up with an easy to use API. CRA is using its GenerateSW *webpack plugin*. This plugin autogenerates a `service-worker.js` that already precaches static assets and registers the navigation route.
+Behind the scenes, CRA is using [Workbox](https://developers.google.com/web/tools/workbox/), a tool by Google that handles all the set up with an easy to use API. CRA is using its GenerateSW _webpack plugin_. This plugin autogenerates a `service-worker.js` that already precaches static assets and registers the navigation route.
 
 The `serviceWorker.ts` file then registers this service worker by calling
 
@@ -123,7 +124,7 @@ Here we're sending a message to the service worker to tell it to skip waiting an
 
 Putting it all together, we should have a component that looks something like the following.
 
-Now you just need to include it somewhere in your application where it *always* gets rendered and you're done.
+Now you just need to include it somewhere in your application where it _always_ gets rendered and you're done.
 
 <https://gist.github.com/fgerschau/ad265d2f678ca81bd520b88979c1b2ae>
 

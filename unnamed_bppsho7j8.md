@@ -1,14 +1,14 @@
 ---
 tags:
-    - backend
-    - backend/go
-id: ""
+  - backend
+  - backend/go
 created: 2020-05-08T07:53:42.768Z
 modified: 2020-05-08T07:58:47.706Z
 ---
+
 # Upgrade golang packages
 
-Simply run: 
+Simply run:
 
 ```bash
 $ go get -u

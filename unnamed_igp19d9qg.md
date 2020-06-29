@@ -1,11 +1,11 @@
 ---
 tags:
-    - frontend/vue
-id: ""
+  - frontend/vue
 created: 2020-05-11T14:04:15.314Z
 modified: 2020-05-11T14:09:20.871Z
 ---
-# Vue双向绑定原理，教你一步一步实现双向绑定
+
+# Vue 双向绑定原理，教你一步一步实现双向绑定
 
 [Source](https://zhuanlan.zhihu.com/p/47541415 "Permalink to Vue双向绑定原理，教你一步一步实现双向绑定")
 
@@ -17,37 +17,37 @@ modified: 2020-05-11T14:09:20.871Z
 
 看完这篇文章之后我相信你会对 Vue 的双向绑定原理有一个清楚的认识。也能帮助我们更好的认识 Vue。
 
-**先看效果图** 
+**先看效果图**
 
 ![](https://pic1.zhimg.com/v2-d28f53a2dfe4b3a64788d5eef9cd919c_b.webp)
 
 ```html
 //代码：
 <div id="app">
-    <input v-model="name" type="text">
-    <h1>{{name}}</h1>
+  <input v-model="name" type="text" />
+  <h1>{{name}}</h1>
 </div>
 <script src="./js/observer.js"></script>
 <script src="./js/watcher.js"></script>
 <script src="./js/compile.js"></script>
 <script src="./js/index.js"></script>
 <script>
-const vm = new Mvue({
+  const vm = new Mvue({
     el: "#app",
     data: {
-        name: "我是摩登"
-    }
-});
+      name: "我是摩登",
+    },
+  });
 </script>
 ```
 
 ## **数据绑定**
 
-在正式开始之前我们先来说说数据绑定的事情，数据绑定我的理解就是让数据M（model）展示到 视图V（view）上。我们常见的架构模式有 MVC、MVP、MVVM模式，目前前端框架基本上都是采用 MVVM 模式实现双向绑定，Vue 自然也不例外。但是各个框架实现双向绑定的方法略有所不同，目前大概有三种实现方式。
+在正式开始之前我们先来说说数据绑定的事情，数据绑定我的理解就是让数据 M（model）展示到 视图 V（view）上。我们常见的架构模式有 MVC、MVP、MVVM 模式，目前前端框架基本上都是采用 MVVM 模式实现双向绑定，Vue 自然也不例外。但是各个框架实现双向绑定的方法略有所不同，目前大概有三种实现方式。
 
-* 发布订阅模式
-* Angular 的脏查机制
-* 数据劫持
+- 发布订阅模式
+- Angular 的脏查机制
+- 数据劫持
 
 而 Vue 则采用的是数据劫持与发布订阅相结合的方式实现双向绑定，数据劫持主要通过 `Object.defineProperty` 来实现。
 
@@ -57,9 +57,9 @@ const vm = new Mvue({
 
 ```javascript
 var people = {
-    name: "Modeng",
-    age: 18
-}
+  name: "Modeng",
+  age: 18,
+};
 people.age; //18
 people.age = 20;
 ```
@@ -67,9 +67,9 @@ people.age = 20;
 上述代码就是普通的获取/设置对象的属性，看不到什么奇怪的变化。
 
 ```javascript
-var modeng = {}
+var modeng = {};
 var age;
-Object.defineProperty(modeng, 'age', {
+Object.defineProperty(modeng, "age", {
   get: function () {
     console.log("获取年龄");
     return age;
@@ -77,7 +77,7 @@ Object.defineProperty(modeng, 'age', {
   set: function (newVal) {
     console.log("设置年龄");
     age = newVal;
-  }
+  },
 });
 modeng.age = 18;
 console.log(modeng.age);
@@ -99,9 +99,9 @@ console.log(modeng.age);
 
 通过上面的描述与分析我们知道 Vue 是通过数据劫持结合发布订阅模式来实现双向绑定的。我们也知道数据劫持是通过 `Object.defineProperty` 方法，当我们知道这些之后，我们就需要一个监听器 Observer 来监听属性的变化。得知属性发生变化之后我们需要一个 Watcher 订阅者来更新视图，我们还需要一个 compile 指令解析器，用于解析我们的节点元素的指令与初始化视图。所以我们需要如下：
 
-* Observer 监听器：用来监听属性的变化通知订阅者
-* Watcher 订阅者：收到属性的变化，然后更新视图
-* Compile 解析器：解析指令，初始化模版，绑定订阅者
+- Observer 监听器：用来监听属性的变化通知订阅者
+- Watcher 订阅者：收到属性的变化，然后更新视图
+- Compile 解析器：解析指令，初始化模版，绑定订阅者
 
 ![](https://pic2.zhimg.com/80/v2-6cf5d54dd97cd1e66feda88e07685611_1440w.jpg)
 
@@ -128,7 +128,7 @@ function defineReactive(data, key, value) {
         value = newVal;
         dep.notify(); //通知订阅器
       }
-    }
+    },
   });
 }
 
@@ -136,7 +136,7 @@ function observer(data) {
   if (!data || typeof data !== "object") {
     return;
   }
-  Object.keys(data).forEach(key => {
+  Object.keys(data).forEach((key) => {
     defineReactive(data, key, data[key]);
   });
 }
@@ -146,13 +146,13 @@ function Dep() {
 }
 Dep.prototype.addSub = function (sub) {
   this.subs.push(sub);
-}
+};
 Dep.prototype.notify = function () {
-  console.log('属性变化通知 Watcher 执行更新视图函数');
-  this.subs.forEach(sub => {
+  console.log("属性变化通知 Watcher 执行更新视图函数");
+  this.subs.forEach((sub) => {
     sub.update();
-  })
-}
+  });
+};
 Dep.target = null;
 ```
 
@@ -160,8 +160,8 @@ Dep.target = null;
 
 ```javascript
 var modeng = {
-  age: 18
-}
+  age: 18,
+};
 observer(modeng);
 modeng.age = 20;
 ```
@@ -196,27 +196,27 @@ Watcher.prototype = {
     const value = this.vm.$data[this.prop]; //因为属性被监听，这一步会执行监听器里的 get方法
     Dep.target = null;
     return value;
-  }
-}
+  },
+};
 ```
 
 这一步我们把 Watcher 也给弄了出来，到这一步我们已经实现了一个简单的双向绑定了，我们可以尝试把两者结合起来看下效果。
 
 ```javascript
 function Mvue(options, prop) {
-    this.$options = options;
-    this.$data = options.data;
-    this.$prop = prop;
-    this.$el = document.querySelector(options.el);
-    this.init();
+  this.$options = options;
+  this.$data = options.data;
+  this.$prop = prop;
+  this.$el = document.querySelector(options.el);
+  this.init();
 }
 Mvue.prototype.init = function () {
-    observer(this.$data);
-    this.$el.textContent = this.$data[this.$prop];
-    new Watcher(this, this.$prop, value => {
-        this.$el.textContent = value;
-    });
-}
+  observer(this.$data);
+  this.$el.textContent = this.$data[this.$prop];
+  new Watcher(this, this.$prop, (value) => {
+    this.$el.textContent = value;
+  });
+};
 ```
 
 这里我们尝试利用一个实例来把数据与需要监听的属性传递进来，通过监听器监听数据，然后添加属性订阅，绑定更新函数。
@@ -224,13 +224,17 @@ Mvue.prototype.init = function () {
 ```html
 <div id="app">{{name}}</div>
 ```
+
 ```javascript
-const vm = new Mvue({
+const vm = new Mvue(
+  {
     el: "#app",
     data: {
-        name: "我是摩登"
-    }
-}, "name");
+      name: "我是摩登",
+    },
+  },
+  "name"
+);
 ```
 
 我们可以看到数据已经正常的显示在页面上，那么我们在通过控制台去修改数据，发生变化后视图也会跟着修改。
@@ -265,8 +269,8 @@ Compile.prototype = {
       child = el.firstChild;
     }
     return fragment;
-  }
-}
+  },
+};
 ```
 
 然后我们就需要对整个节点和指令进行处理编译，根据不同的节点去调用不同的渲染函数，绑定更新函数，编译完成之后，再把 DOM 片段添加到页面中。
@@ -275,7 +279,7 @@ Compile.prototype = {
 Compile.prototype = {
   compileNode: function (fragment) {
     let childNodes = fragment.childNodes;
-    [...childNodes].forEach(node => {
+    [...childNodes].forEach((node) => {
       let reg = /\{\{(.*)\}\}/;
       let text = node.textContent;
       if (this.isElementNode(node)) {
@@ -293,7 +297,7 @@ Compile.prototype = {
   },
   compile: function (node) {
     let nodeAttrs = node.attributes;
-    [...nodeAttrs].forEach(attr => {
+    [...nodeAttrs].forEach((attr) => {
       let name = attr.name;
       if (this.isDirective(name)) {
         let value = attr.value;
@@ -305,7 +309,7 @@ Compile.prototype = {
     });
   },
   //省略。。。
-}
+};
 ```
 
 因为代码比较长如果全部贴出来会影响阅读，我们主要是讲整个过程实现的思路，文章结束我会把源码发出来，有兴趣的可以去查看全部代码。
@@ -328,26 +332,26 @@ function Mvue(options) {
 Mvue.prototype.init = function () {
   observer(this.$data);
   new Compile(this);
-}
+};
 ```
 
 然后我们就去测试一下结果，看看我们实现的 Mvue 是不是真的可以运行。
 
 ```html
 <div id="app">
-    <h1>{{name}}</h1>
+  <h1>{{name}}</h1>
 </div>
 <script src="./js/observer.js"></script>
 <script src="./js/watcher.js"></script>
 <script src="./js/compile.js"></script>
 <script src="./js/index.js"></script>
 <script>
-    const vm = new Mvue({
-        el: "#app",
-        data: {
-            name: "完全没问题，看起来是不是很酷！"
-        }
-    });
+  const vm = new Mvue({
+    el: "#app",
+    data: {
+      name: "完全没问题，看起来是不是很酷！",
+    },
+  });
 </script>
 ```
 
@@ -367,7 +371,7 @@ function Mvue(options) {
   this.$data = options.data;
   this.$el = document.querySelector(options.el);
   //数据代理
-  Object.keys(this.$data).forEach(key => {
+  Object.keys(this.$data).forEach((key) => {
     this.proxyData(key);
   });
 
@@ -376,17 +380,17 @@ function Mvue(options) {
 Mvue.prototype.init = function () {
   observer(this.$data);
   new Compile(this);
-}
+};
 Mvue.prototype.proxyData = function (key) {
   Object.defineProperty(this, key, {
     get: function () {
-      return this.$data[key]
+      return this.$data[key];
     },
     set: function (value) {
       this.$data[key] = value;
-    }
+    },
   });
-}
+};
 ```
 
 ![](https://pic4.zhimg.com/v2-c0f47ba97062aa1f792fd2fb4a9cb537_b.jpg)
