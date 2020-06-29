@@ -1,9 +1,10 @@
 ---
-note:
-    id: ""
-    tags: [crossnote/android/twa, mobile/android/twa]
-    modifiedAt: 2020-05-01T08:07:41.963Z
-    createdAt: 2020-05-01T08:07:19.503Z
+tags:
+    - crossnote/android/twa
+    - mobile/android/twa
+id: ""
+created: 2020-05-01T08:07:19.503Z
+modified: 2020-05-01T08:07:41.963Z
 ---
 # @bubblewrap/cli
 #crossnote/android/twa #mobile/android/twa 

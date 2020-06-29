@@ -1,9 +1,10 @@
 ---
-note:
-    id: ""
-    tags: [crossnote/publish, websites]
-    modifiedAt: 2020-05-03T14:52:41.721Z
-    createdAt: 2020-05-03T14:52:05.199Z
+tags:
+    - crossnote/publish
+    - websites
+id: ""
+created: 2020-05-03T14:52:05.199Z
+modified: 2020-05-03T14:52:41.721Z
 ---
 # Privacy policy generator
 

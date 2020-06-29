@@ -2,11 +2,10 @@
 notebook:
     owner: shd101wyy
     name: 'Yiyi notes'
-note:
-    createdAt: 2020-03-21T09:49:00.434Z
-    modifiedAt: 2020-05-17T03:19:08.397Z
-    tags: []
-    pinned: true
+tags: []
+pinned: true
+created: 2020-03-21T09:49:00.434Z
+modified: 2020-05-17T03:19:08.397Z
 ---
 
 # Yiyi notes

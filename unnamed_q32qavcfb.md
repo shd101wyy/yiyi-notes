@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-05-22T14:10:37.568Z
-    modifiedAt: 2020-06-01T14:30:08.361Z
-    tags: [小工具]
-    id: ""
+tags:
+    - 小工具
+id: ""
+created: 2020-05-22T14:10:37.568Z
+modified: 2020-06-01T14:30:08.361Z
 ---
 # Tmux Cheat Sheet & Quick Reference
 

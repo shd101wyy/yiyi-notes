@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [algorithm]
-    modifiedAt: 2020-05-19T09:53:06.882Z
-    createdAt: 2020-05-19T09:52:09.508Z
+tags:
+    - algorithm
+id: ""
+created: 2020-05-19T09:52:09.508Z
+modified: 2020-05-19T09:53:06.882Z
 ---
 # Dijkstra algorithm
 [Source](https://www.cnblogs.com/biyeymyhjob/archive/2012/07/31/2615833.html "Permalink to 最短路径—Dijkstra算法和Floyd算法 - as_ - 博客园")

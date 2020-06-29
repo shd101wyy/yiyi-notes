@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [frontend/react]
-    modifiedAt: 2020-03-21T12:22:22.386Z
-    createdAt: 2020-03-21T12:22:11.059Z
+tags:
+    - frontend/react
+id: ""
+created: 2020-03-21T12:22:11.059Z
+modified: 2020-03-21T12:22:22.386Z
 ---
 # React Hooks Study
 

@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-03-21T11:18:47.975Z
-    modifiedAt: 2020-03-21T11:39:08.212Z
-    tags: [backend/docker]
-    id: ""
+tags:
+    - backend/docker
+id: ""
+created: 2020-03-21T11:18:47.975Z
+modified: 2020-03-21T11:39:08.212Z
 ---
 # 国内 docker 镜像加速
 

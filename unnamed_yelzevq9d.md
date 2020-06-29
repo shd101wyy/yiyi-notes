@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [crossnote/codemirror]
-    modifiedAt: 2020-05-10T12:44:33.794Z
-    createdAt: 2020-05-10T12:43:55.539Z
+tags:
+    - crossnote/codemirror
+id: ""
+created: 2020-05-10T12:43:55.539Z
+modified: 2020-05-10T12:44:33.794Z
 ---
 # Hint-function: Filtered hints containing HTML are escaped
 

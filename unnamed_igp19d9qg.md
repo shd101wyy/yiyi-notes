@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [frontend/vue]
-    modifiedAt: 2020-05-11T14:09:20.871Z
-    createdAt: 2020-05-11T14:04:15.314Z
+tags:
+    - frontend/vue
+id: ""
+created: 2020-05-11T14:04:15.314Z
+modified: 2020-05-11T14:09:20.871Z
 ---
 # Vue双向绑定原理，教你一步一步实现双向绑定
 

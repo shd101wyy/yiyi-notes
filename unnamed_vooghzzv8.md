@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [crossnote]
-    modifiedAt: 2020-06-13T07:54:57.666Z
-    createdAt: 2020-06-13T07:54:50.871Z
+tags:
+    - crossnote
+id: ""
+created: 2020-06-13T07:54:50.871Z
+modified: 2020-06-13T07:54:57.666Z
 ---
 # Native System API
 

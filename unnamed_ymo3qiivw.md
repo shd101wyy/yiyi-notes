@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [backend/git]
-    modifiedAt: 2020-06-01T14:14:12.947Z
-    createdAt: 2020-06-01T14:12:28.636Z
+tags:
+    - backend/git
+id: ""
+created: 2020-06-01T14:12:28.636Z
+modified: 2020-06-01T14:14:12.947Z
 ---
 # Git 代理的问题
 > https://www.v2ex.com/t/641227#r_8529977

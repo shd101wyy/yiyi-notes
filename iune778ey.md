@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [读书笔记/人间失格]
-    modifiedAt: 2020-03-21T12:32:14.336Z
-    createdAt: 2020-03-21T12:31:55.787Z
+tags:
+    - 读书笔记/人间失格
+id: ""
+created: 2020-03-21T12:31:55.787Z
+modified: 2020-03-21T12:32:14.336Z
 ---
 ![](https://i.loli.net/2019/11/30/QyJe5koYPudNWjH.jpg)  
 

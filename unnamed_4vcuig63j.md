@@ -1,9 +1,10 @@
 ---
-note:
-    id: ""
-    tags: [frontend/pwa/splash-screen, frontend/react/create-react-app]
-    modifiedAt: 2020-04-30T10:57:14.791Z
-    createdAt: 2020-04-30T10:54:43.218Z
+tags:
+    - frontend/pwa/splash-screen
+    - frontend/react/create-react-app
+id: ""
+created: 2020-04-30T10:54:43.218Z
+modified: 2020-04-30T10:57:14.791Z
 ---
 # PWA Splash screen
 #frontend/pwa/splash-screen #frontend/react/create-react-app 

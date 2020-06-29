@@ -1,9 +1,10 @@
 ---
-note:
-    createdAt: 2020-03-21T11:12:16.805Z
-    modifiedAt: 2020-03-21T11:38:45.153Z
-    tags: [backend, backend/postgresql]
-    id: ""
+tags:
+    - backend
+    - backend/postgresql
+id: ""
+created: 2020-03-21T11:12:16.805Z
+modified: 2020-03-21T11:38:45.153Z
 ---
 # PostgreSQL Data Migration on Ubuntu 18.04
 

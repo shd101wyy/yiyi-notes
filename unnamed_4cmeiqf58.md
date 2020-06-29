@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-04-02T03:13:23.534Z
-    modifiedAt: 2020-04-02T03:38:37.802Z
-    tags: [crossnote]
-    id: ""
+tags:
+    - crossnote
+id: ""
+created: 2020-04-02T03:13:23.534Z
+modified: 2020-04-02T03:38:37.802Z
 ---
 # Crossnote notebook publish design
 

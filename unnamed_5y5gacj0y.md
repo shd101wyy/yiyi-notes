@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [crossnote/explore]
-    modifiedAt: 2020-04-26T12:19:19.509Z
-    createdAt: 2020-04-26T12:13:42.278Z
+tags:
+    - crossnote/explore
+id: ""
+created: 2020-04-26T12:13:42.278Z
+modified: 2020-04-26T12:19:19.509Z
 ---
 # Crossnote explore section design
 #crossnote/explore 

@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [读书笔记/基督山伯爵]
-    modifiedAt: 2020-03-21T12:34:00.419Z
-    createdAt: 2020-03-21T12:33:19.999Z
+tags:
+    - 读书笔记/基督山伯爵
+id: ""
+created: 2020-03-21T12:33:19.999Z
+modified: 2020-03-21T12:34:00.419Z
 ---
 ![](https://i.loli.net/2020/02/05/EnfI9eFogLs2RKH.jpg)  
 

@@ -1,8 +1,8 @@
 ---
-note:
-  createdAt: 2020-04-23T05:49:10.136Z
-  modifiedAt: 2020-04-23T07:20:09.775Z
-  tags: [crossnote/flutter]
+tags:
+    - crossnote/flutter
+created: 2020-04-23T05:49:10.136Z
+modified: 2020-04-23T07:20:09.775Z
 ---
 
 # Crossnote Flutter 调研

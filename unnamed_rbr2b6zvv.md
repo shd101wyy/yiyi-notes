@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-04-29T08:01:13.541Z
-    modifiedAt: 2020-04-30T13:39:03.754Z
-    tags: [backend/npm/patch]
-    id: ""
+tags:
+    - backend/npm/patch
+id: ""
+created: 2020-04-29T08:01:13.541Z
+modified: 2020-04-30T13:39:03.754Z
 ---
 # patch-package
 #backend/npm #backend/npm/patch

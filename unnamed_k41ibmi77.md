@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-06-10T13:47:43.314Z
-    modifiedAt: 2020-06-11T08:20:24.095Z
-    tags: [PL/PureScript]
-    id: ""
+tags:
+    - PL/PureScript
+id: ""
+created: 2020-06-10T13:47:43.314Z
+modified: 2020-06-11T08:20:24.095Z
 ---
 # PureScript
 

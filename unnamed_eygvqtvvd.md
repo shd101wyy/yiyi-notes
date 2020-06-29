@@ -1,11 +1,16 @@
 ---
-note:
-    id: ""
-    tags: [小工具, 小工具/gif]
-    modifiedAt: 2020-04-12T12:35:47.164Z
-    createdAt: 2020-04-12T12:35:01.550Z
+tags:
+    - 小工具
+    - 小工具/gif
+id: ""
+created: 2020-04-12T12:35:01.550Z
+modified: 2020-06-23T11:53:16.447Z
 ---
 # GIF 录屏工具
 #小工具/gif  
 
-[peek](https://github.com/phw/peek)
+Linux 
+* [peek](https://github.com/phw/peek)
+
+macOS
+* [kap](https://getkap.co/ )

@@ -1,9 +1,11 @@
 ---
-note:
-    createdAt: 2020-05-19T03:45:09.548Z
-    modifiedAt: 2020-05-19T04:36:12.250Z
-    tags: [algorithm, 'algorithm/data structure', interview]
-    id: ""
+tags:
+    - algorithm
+    - 'algorithm/data structure'
+    - interview
+id: ""
+created: 2020-05-19T03:45:09.548Z
+modified: 2020-05-19T04:36:12.250Z
 ---
 # Basic data structures
 

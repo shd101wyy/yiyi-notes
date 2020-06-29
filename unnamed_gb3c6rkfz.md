@@ -1,8 +1,9 @@
 ---
-note:
-    createdAt: 2020-04-16T08:42:26.164Z
-    modifiedAt: 2020-04-16T08:56:33.288Z
-    tags: [crossnote, frontend/material-ui]
+tags:
+    - crossnote
+    - frontend/material-ui
+created: 2020-04-16T08:42:26.164Z
+modified: 2020-04-16T08:56:33.288Z
 ---
 # Material-UI Theme generator
 #frontend/material-ui #crossnote 

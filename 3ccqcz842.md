@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-03-21T11:16:57.039Z
-    modifiedAt: 2020-03-21T11:39:04.699Z
-    tags: [backend/postgresql]
-    id: ""
+tags:
+    - backend/postgresql
+id: ""
+created: 2020-03-21T11:16:57.039Z
+modified: 2020-03-21T11:39:04.699Z
 ---
 # PostgreSQL max connections issue
 

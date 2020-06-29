@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-03-21T11:15:30.627Z
-    modifiedAt: 2020-03-21T11:38:57.878Z
-    tags: [backend/graphql]
-    id: ""
+tags:
+    - backend/graphql
+id: ""
+created: 2020-03-21T11:15:30.627Z
+modified: 2020-03-21T11:38:57.878Z
 ---
 # GraphQL articles
 

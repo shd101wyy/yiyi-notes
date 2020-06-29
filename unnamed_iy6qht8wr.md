@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [backend/ss]
-    modifiedAt: 2020-05-07T07:16:33.566Z
-    createdAt: 2020-05-07T07:16:32.517Z
+tags:
+    - backend/ss
+id: ""
+created: 2020-05-07T07:16:32.517Z
+modified: 2020-05-07T07:16:33.566Z
 ---
 # Install V2Ray + WebSocket + TLS + Caddy + CDN Using 233boy Script
 

@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-05-19T03:43:56.711Z
-    modifiedAt: 2020-05-19T03:48:20.537Z
-    tags: [interview]
-    id: ""
+tags:
+    - interview
+id: ""
+created: 2020-05-19T03:43:56.711Z
+modified: 2020-05-19T03:48:20.537Z
 ---
 # Interview 面试准备
 

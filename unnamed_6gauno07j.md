@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: ['algorithm/machine learning']
-    modifiedAt: 2020-05-20T14:00:07.623Z
-    createdAt: 2020-05-20T13:54:13.466Z
+tags:
+    - 'algorithm/machine learning'
+id: ""
+created: 2020-05-20T13:54:13.466Z
+modified: 2020-05-20T14:00:07.623Z
 ---
 # scikit-learn: machine learning in Python — scikit-learn 0.23.1 documentation
 

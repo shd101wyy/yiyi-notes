@@ -1,9 +1,10 @@
 ---
-note:
-    id: ""
-    tags: [crossnote/inspirations, 摘录]
-    modifiedAt: 2020-05-20T14:41:17.257Z
-    createdAt: 2020-05-20T14:40:49.656Z
+tags:
+    - crossnote/inspirations
+    - 摘录
+id: ""
+created: 2020-05-20T14:40:49.656Z
+modified: 2020-05-20T14:41:17.257Z
 ---
 # 用TiddlyWiki替代Notion和EverNote作为个人知识管理系统
 

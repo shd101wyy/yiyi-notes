@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [interview/frontend/basics]
-    modifiedAt: 2020-05-24T14:56:00.415Z
-    createdAt: 2020-05-24T14:36:11.216Z
+tags:
+    - interview/frontend/basics
+id: ""
+created: 2020-05-24T14:36:11.216Z
+modified: 2020-05-24T14:56:00.415Z
 ---
 # 前端面试基础
 

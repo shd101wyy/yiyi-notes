@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-05-01T12:36:59.886Z
-    modifiedAt: 2020-05-01T12:41:12.334Z
-    tags: [frontend/react/create-react-app]
-    id: ""
+tags:
+    - frontend/react/create-react-app
+id: ""
+created: 2020-05-01T12:36:59.886Z
+modified: 2020-05-01T12:41:12.334Z
 ---
 # Create a PWA Update Notification with Create React App
 #frontend/react/create-react-app 

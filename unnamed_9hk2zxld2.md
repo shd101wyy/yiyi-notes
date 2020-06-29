@@ -1,9 +1,10 @@
 ---
-note:
-    createdAt: 2020-05-19T08:14:04.596Z
-    modifiedAt: 2020-05-19T09:01:45.655Z
-    tags: [algorithm, interview]
-    id: ""
+tags:
+    - algorithm
+    - interview
+id: ""
+created: 2020-05-19T08:14:04.596Z
+modified: 2020-05-19T09:01:45.655Z
 ---
 # 排序算法
 1. 时间复杂度为 $O(n^2)$ 的排序算法

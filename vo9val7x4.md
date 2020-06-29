@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-03-21T11:11:13.327Z
-    modifiedAt: 2020-03-21T11:38:38.078Z
-    tags: [backend/nginx]
-    id: ""
+tags:
+    - backend/nginx
+id: ""
+created: 2020-03-21T11:11:13.327Z
+modified: 2020-03-21T11:38:38.078Z
 ---
 # 关于 nginx 的路径配置问题（新手）
 

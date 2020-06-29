@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [backend/git]
-    modifiedAt: 2020-06-10T08:49:55.066Z
-    createdAt: 2020-06-10T08:47:12.910Z
+tags:
+    - backend/git
+id: ""
+created: 2020-06-10T08:47:12.910Z
+modified: 2020-06-10T08:49:55.066Z
 ---
 # Commitzation
 * **feat**: A new feature

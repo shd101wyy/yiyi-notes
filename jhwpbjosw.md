@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [frontend/react]
-    modifiedAt: 2020-03-21T12:21:37.364Z
-    createdAt: 2020-03-21T12:21:20.755Z
+tags:
+    - frontend/react
+id: ""
+created: 2020-03-21T12:21:20.755Z
+modified: 2020-03-21T12:21:37.364Z
 ---
 # React Fragments
 

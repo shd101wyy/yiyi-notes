@@ -1,9 +1,10 @@
 ---
-note:
-    id: ""
-    tags: [pl, pl/haskell]
-    modifiedAt: 2020-06-15T09:31:54.433Z
-    createdAt: 2020-06-15T09:10:23.073Z
+tags:
+    - pl
+    - pl/haskell
+id: ""
+created: 2020-06-15T09:10:23.073Z
+modified: 2020-06-15T09:31:54.433Z
 ---
 # Haskell
 

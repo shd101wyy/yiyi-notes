@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [读书笔记/樱树抽芽时想你]
-    modifiedAt: 2020-03-21T12:34:04.617Z
-    createdAt: 2020-03-21T12:32:20.137Z
+tags:
+    - 读书笔记/樱树抽芽时想你
+id: ""
+created: 2020-03-21T12:32:20.137Z
+modified: 2020-03-21T12:34:04.617Z
 ---
 ![1213130618.jpg](https://i.loli.net/2020/01/07/Uih5TZALvHInCGy.jpg)
 

@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [计划]
-    modifiedAt: 2020-03-21T12:30:21.921Z
-    createdAt: 2020-03-21T12:29:38.039Z
+tags:
+    - 计划
+id: ""
+created: 2020-03-21T12:29:38.039Z
+modified: 2020-03-21T12:30:21.921Z
 ---
 # 2019 年末旅行计划:airplane:
 

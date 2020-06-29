@@ -1,9 +1,10 @@
 ---
-note:
-    createdAt: 2020-06-02T08:05:32.127Z
-    modifiedAt: 2020-06-02T09:54:56.317Z
-    tags: [backend, backend/maven]
-    id: ""
+tags:
+    - backend
+    - backend/maven
+id: ""
+created: 2020-06-02T08:05:32.127Z
+modified: 2020-06-02T09:54:56.317Z
 ---
 # Maven proxy
 

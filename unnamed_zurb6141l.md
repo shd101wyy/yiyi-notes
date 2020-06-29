@@ -1,9 +1,10 @@
 ---
-note:
-    createdAt: 2020-04-30T12:59:54.155Z
-    modifiedAt: 2020-04-30T13:42:29.773Z
-    tags: [algorithm/crdt, crossnote]
-    id: ""
+tags:
+    - algorithm/crdt
+    - crossnote
+id: ""
+created: 2020-04-30T12:59:54.155Z
+modified: 2020-04-30T13:42:29.773Z
 ---
 # Conclave
 <!-- @crossnote.comment "id":"c9cf43e9-7d3e-489e-9f0e-f870fa664c35" -->  

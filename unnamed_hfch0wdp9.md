@@ -1,9 +1,10 @@
 ---
-note:
-    id: ""
-    tags: [crossnote/android/twa, mobile/android/twa]
-    modifiedAt: 2020-05-01T08:06:38.997Z
-    createdAt: 2020-05-01T08:05:27.492Z
+tags:
+    - crossnote/android/twa
+    - mobile/android/twa
+id: ""
+created: 2020-05-01T08:05:27.492Z
+modified: 2020-05-01T08:06:38.997Z
 ---
 # Trusted Web Activities Quick Start Guide  |  Web On Android
 #crossnote/android/twa  #mobile/android/twa 

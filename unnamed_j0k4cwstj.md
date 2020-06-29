@@ -1,9 +1,10 @@
 ---
-note:
-    id: ""
-    tags: [frontend/xss, security]
-    modifiedAt: 2020-05-01T02:10:27.307Z
-    createdAt: 2020-05-01T02:09:59.846Z
+tags:
+    - frontend/xss
+    - security
+id: ""
+created: 2020-05-01T02:09:59.846Z
+modified: 2020-05-01T02:10:27.307Z
 ---
 # XSS Filter Evasion Cheat Sheet | OWASP
 #frontend/xss #security 

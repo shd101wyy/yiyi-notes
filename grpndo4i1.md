@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-03-21T12:20:36.320Z
-    modifiedAt: 2020-04-30T14:48:24.615Z
-    tags: [frontend]
-    id: ""
+tags:
+    - frontend
+id: ""
+created: 2020-03-21T12:20:36.320Z
+modified: 2020-04-30T14:48:24.615Z
 ---
 # What is AMD, CommonJS, and UMD?
 

@@ -1,9 +1,9 @@
 ---
-note:
-    id: ""
-    tags: [crossnote/inspirations]
-    modifiedAt: 2020-06-14T11:54:56.003Z
-    createdAt: 2020-06-14T11:54:42.559Z
+tags:
+    - crossnote/inspirations
+id: ""
+created: 2020-06-14T11:54:42.559Z
+modified: 2020-06-14T11:54:56.003Z
 ---
 # 使用 TiddlyWiki 打造轻便个人 Wiki 知识库 - 钉子の次元
 

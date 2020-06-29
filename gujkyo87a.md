@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-03-21T10:45:40.533Z
-    modifiedAt: 2020-03-21T11:38:34.044Z
-    tags: [backend/sql]
-    id: ""
+tags:
+    - backend/sql
+id: ""
+created: 2020-03-21T10:45:40.533Z
+modified: 2020-03-21T11:38:34.044Z
 ---
 # SQL Joins
 

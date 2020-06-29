@@ -1,9 +1,9 @@
 ---
-note:
-    createdAt: 2020-03-21T11:18:13.121Z
-    modifiedAt: 2020-03-21T11:39:10.900Z
-    tags: [backend/npm]
-    id: ""
+tags:
+    - backend/npm
+id: ""
+created: 2020-03-21T11:18:13.121Z
+modified: 2020-03-21T11:39:10.900Z
 ---
 # npm publish 413 Request Entity Too Large issue
 
