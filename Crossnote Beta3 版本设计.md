@@ -3,7 +3,7 @@ tags:
     - crossnote
     - crossnote/beta3
 created: 2020-06-28T04:31:51.848Z
-modified: 2020-07-06T09:38:27.367Z
+modified: 2020-07-17T07:28:23.826Z
 ---
 # Crossnote Beta3 版本设计
 #crossnote/beta3 
@@ -18,6 +18,7 @@ title: Title of the note, which should match the file name
 created: Date this note is created
 modified: Date this note is modified
 pinned: false
+favorited: false
 ---
 ```
 
